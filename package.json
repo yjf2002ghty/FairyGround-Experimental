@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "serve": "serve public --no-compression",
+    "build": "rm -rf public/lib && mkdir -p public/lib && cp node_modules/fairy-stockfish-nnue.wasm/* public/lib && cp node_modules/ffish-es6/ffish.wasm public/ && browserify -p esmify src/main.js -o public/bundle.js",
+    "watch-build": "watchify -p esmify src/main.js -o public/bundle.js",
+    "format": "prettier --write src public/*.html",
+    "format:check": "prettier --check src public/*.html"
+  },
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "chessgroundx": "^10.2.2",
+    "express": "^4.17.1",
+    "fairy-stockfish-nnue.wasm": "^1.1.2",
+    "ffish-es6": "^0.7.4",
+    "serve": "^12.0.0"
+  },
+  "devDependencies": {
+    "browser-resolve": "^2.0.0",
+    "browserify": "^17.0.0",
+    "esmify": "^2.1.1",
+    "prettier": "^2.3.2",
+    "watchify": "^4.0.0",
+    "vercel": "^23.0.1"
+  }
+}
