@@ -47,19 +47,19 @@ The installation progress may take long time. If it keeps downloading for a long
 4. Bundle JavaScript to make webpage work
 
 ```bash
-# One time use (Bash)
+# If you are user that don't change the code, run command below (Bash)
 npm run build
 
-# or, continuously run in background and watch for changes (Bash)
+# Else if you are the developer that wants to change the code and immediately see changes in your browser, run command below (Bash)
 npm run watch-build
 ```
 
 If you are using CMD instead of Bash, 
 ```bash
-:: One time use (CMD)
+:: If you are user that don't change the code, run command below (CMD)
 npm run buildwithcmd
 
-:: or, continuously run in background and watch for changes (CMD)
+:: Else if you are the developer that wants to change the code and immediately see changes in your browser, run command below (CMD)
 npm run watch-build
 ```
 
