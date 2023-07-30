@@ -3,6 +3,7 @@
 This is an experimental version of FairyGround (See [https://github.com/ianfab/fairyground](https://github.com/ianfab/fairyground)) with new features added. It is a simple demo and playground for [Fairy-Stockfish](https://github.com/ianfab/Fairy-Stockfish) in the browser, using its [WebAssembly port](https://github.com/ianfab/fairy-stockfish.wasm), its [ffish.js](https://www.npmjs.com/package/ffish-es6) library, and the graphical [chessgroundx](https://github.com/gbtami/chessgroundx) library. It is based on the [demo for Fairy-Stockfish WASM](https://github.com/ianfab/fairy-stockfish-nnue-wasm-demo) and [ffish-test](https://github.com/thearst3rd/ffish-test).
 
 You can see it deployed at: [https://fairyground-new.vercel.app/](https://fairyground-new.vercel.app/)
+(This version does not support binary engine loading feature. To enable it, see step 5 below.)
 
 ## Usage (Unix-like system installation)
 
@@ -55,7 +56,7 @@ npm run watch-build
 ```
 
 If you are using CMD instead of Bash, 
-```bash
+```batch
 :: If you are user that don't change the code, run command below (CMD)
 npm run buildwithcmd
 
@@ -65,13 +66,21 @@ npm run watch-build
 
 
 5. Start server
+Start without binary engine loading feature:
 
 ```bash
 # Bash or CMD
 npm run serve
 ```
 
-Then, browse to http://localhost:5000/index.html
+Start with binary engine loading feature:
+
+```bash
+# Bash or CMD
+node server.js
+```
+
+Then, browse to http://localhost:5000/
 
 Enjoy!
 

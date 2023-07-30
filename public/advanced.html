@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8" />
-    <title>Fairy-Stockfish playground</title>
+    <title>Fairy-Stockfish Playground (Experimental)</title>
     <!-- By curl https://data-url-maker-hiro18181.netlify.app/api/url/https://upload.wikimedia.org/wikipedia/commons/e/ef/Chess_ndt45.svg -->
     <link rel="icon"
           href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSI0NSIgaGVpZ2h0PSI0NSI+CiAgPGcgc3R5bGU9Im9wYWNpdHk6MTsgZmlsbDpub25lOyBmaWxsLW9wYWNpdHk6MTsgZmlsbC1ydWxlOmV2ZW5vZGQ7IHN0cm9rZTojMDAwMDAwOyBzdHJva2Utd2lkdGg6MS41OyBzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDsgc3Ryb2tlLWRhc2hhcnJheTpub25lOyBzdHJva2Utb3BhY2l0eToxOyI+CiAgICA8cGF0aAogICAgICBkPSJNIDIyLDEwIEMgMzIuNSwxMSAzOC41LDE4IDM4LDM5IEwgMTUsMzkgQyAxNSwzMCAyNSwzMi41IDIzLDE4IgogICAgICBzdHlsZT0iZmlsbDojMDAwMDAwOyBzdHJva2U6IzAwMDAwMDsiIC8+CiAgICA8cGF0aAogICAgICBkPSJNIDI0LDE4IEMgMjQuMzgsMjAuOTEgMTguNDUsMjUuMzcgMTYsMjcgQyAxMywyOSAxMy4xOCwzMS4zNCAxMSwzMSBDIDkuOTU4LDMwLjA2IDEyLjQxLDI3Ljk2IDExLDI4IEMgMTAsMjggMTEuMTksMjkuMjMgMTAsMzAgQyA5LDMwIDUuOTk3LDMxIDYsMjYgQyA2LDI0IDEyLDE0IDEyLDE0IEMgMTIsMTQgMTMuODksMTIuMSAxNCwxMC41IEMgMTMuMjcsOS41MDYgMTMuNSw4LjUgMTMuNSw3LjUgQyAxNC41LDYuNSAxNi41LDEwIDE2LjUsMTAgTCAxOC41LDEwIEMgMTguNSwxMCAxOS4yOCw4LjAwOCAyMSw3IEMgMjIsNyAyMiwxMCAyMiwxMCIKICAgICAgc3R5bGU9ImZpbGw6IzAwMDAwMDsgc3Ryb2tlOiMwMDAwMDA7IiAvPgogICAgPHBhdGgKICAgICAgZD0iTSA5LjUgMjUuNSBBIDAuNSAwLjUgMCAxIDEgOC41LDI1LjUgQSAwLjUgMC41IDAgMSAxIDkuNSAyNS41IHoiCiAgICAgIHN0eWxlPSJmaWxsOiNmZmZmZmY7IHN0cm9rZTojZmZmZmZmOyIgLz4KICAgIDxwYXRoCiAgICAgIGQ9Ik0gMTUgMTUuNSBBIDAuNSAxLjUgMCAxIDEgIDE0LDE1LjUgQSAwLjUgMS41IDAgMSAxICAxNSAxNS41IHoiCiAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDAuODY2LDAuNSwtMC41LDAuODY2LDkuNjkzLC01LjE3MykiCiAgICAgIHN0eWxlPSJmaWxsOiNmZmZmZmY7IHN0cm9rZTojZmZmZmZmOyIgLz4KICAgIDxwYXRoCiAgICAgIGQ9Ik0gMjQuNTUsMTAuNCBMIDI0LjEsMTEuODUgTCAyNC42LDEyIEMgMjcuNzUsMTMgMzAuMjUsMTQuNDkgMzIuNSwxOC43NSBDIDM0Ljc1LDIzLjAxIDM1Ljc1LDI5LjA2IDM1LjI1LDM5IEwgMzUuMiwzOS41IEwgMzcuNDUsMzkuNSBMIDM3LjUsMzkgQyAzOCwyOC45NCAzNi42MiwyMi4xNSAzNC4yNSwxNy42NiBDIDMxLjg4LDEzLjE3IDI4LjQ2LDExLjAyIDI1LjA2LDEwLjUgTCAyNC41NSwxMC40IHogIgogICAgICBzdHlsZT0iZmlsbDojZmZmZmZmOyBzdHJva2U6bm9uZTsiIC8+CiAgPC9nPgo8L3N2Zz4K" />
@@ -60,6 +60,11 @@
         margin-bottom: 10px;
     }
 
+    #ffishsettings {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
     #gamesettings {
         display: flex;
         margin-bottom: 10px;
@@ -79,39 +84,45 @@
         border-right: 0;
     }
 
-    #input2 #movetime {
-        width: 5%;
+    #ffishsettings #movetime {
+        width: 10%;
         padding: 2px 0 2px 6px;
         border: 1px solid #ddd;
         border-right: 0;
     }
 
-    #input2 #depth {
-        width: 5%;
+    #ffishsettings #depth {
+        width: 10%;
         padding: 2px 0 2px 6px;
         border: 1px solid #ddd;
         border-right: 0;
     }
 
-    #input2 #threads {
-        width: 5%;
+    #ffishsettings #nodes {
+        width: 10%;
         padding: 2px 0 2px 6px;
         border: 1px solid #ddd;
         border-right: 0;
     }
 
-    #input2 #hash {
-        width: 5%;
+    #ffishsettings #threads {
+        width: 10%;
         padding: 2px 0 2px 6px;
         border: 1px solid #ddd;
         border-right: 0;
     }
 
-    #input2 #multipv {
-        width: 5%;
+    #ffishsettings #hash {
+        width: 10%;
         padding: 2px 0 2px 6px;
         border: 1px solid #ddd;
         border-right: 0;
+    }
+
+    #ffishsettings #multipv {
+        width: 10%;
+        padding: 2px 0 2px 6px;
+        border: 1px solid #ddd;
     }
 
     #input button {
@@ -268,7 +279,7 @@
         font-size: 16px;
     }
 
-    #output2 {
+    #output2-div {
         height: 70%;
         border: 1px solid #ddd;
         padding: 10px;
@@ -455,11 +466,24 @@
                 border-right: 0;
             }
 
-            #advancedtimesettings #whitetimesettings #whitetimemargin {
+            #advancedtimesettings #whitetimesettings #whitebyoyomitime {
                 width: 15%;
                 padding: 2px 0 2px 6px;
                 border: 1px solid #ddd;
                 border-right: 0;
+            }
+
+            #advancedtimesettings #whitetimesettings #whitebyoyomiperiodcount {
+                width: 15%;
+                padding: 2px 0 2px 6px;
+                border: 1px solid #ddd;
+                border-right: 0;
+            }
+
+            #advancedtimesettings #whitetimesettings #whitetimemargin {
+                width: 15%;
+                padding: 2px 0 2px 6px;
+                border: 1px solid #ddd;
             }
 
         #advancedtimesettings #blacktimesettings {
@@ -487,11 +511,24 @@
                 border-right: 0;
             }
 
-            #advancedtimesettings #blacktimesettings #blacktimemargin {
+            #advancedtimesettings #blacktimesettings #blackbyoyomitime {
                 width: 15%;
                 padding: 2px 0 2px 6px;
                 border: 1px solid #ddd;
                 border-right: 0;
+            }
+
+            #advancedtimesettings #blacktimesettings #blackbyoyomiperiodcount {
+                width: 15%;
+                padding: 2px 0 2px 6px;
+                border: 1px solid #ddd;
+                border-right: 0;
+            }
+
+            #advancedtimesettings #blacktimesettings #blacktimemargin {
+                width: 15%;
+                padding: 2px 0 2px 6px;
+                border: 1px solid #ddd;
             }
 
         #advancedtimesettings #gamecontrol-start {
@@ -519,8 +556,129 @@
         transition: 0.5s linear;
         font-weight: bold;
         font-family: "Times New Roman",Georgia,Serif,Arial;
-        z-index: 2;
+        z-index: 3;
     }
+
+    #enginesettings {
+        margin-bottom: 10px;
+    }
+
+        #enginesettings button {
+            display: inline-block;
+            padding: 3px 6px 3px 6px;
+            background: #888;
+            color: #fff;
+            font-weight: bold;
+            margin-left: 6px;
+            margin-right: 6px;
+            cursor: pointer;
+        }
+
+        #enginesettings #whiteengine {
+            margin-bottom: 10px;
+        }
+
+        #enginesettings #blackengine {
+            margin-bottom: 10px;
+        }
+
+        #enginesettings #whiteenginepath {
+            width: 30%;
+            padding: 2px 0 2px 6px;
+            border: 1px solid #ddd;
+        }
+
+        #enginesettings #blackenginepath {
+            width: 30%;
+            padding: 2px 0 2px 6px;
+            border: 1px solid #ddd;
+        }
+
+        #enginesettings #whiteengineprotocol {
+            margin-left: 10px;
+            min-width: 120px;
+            background: #eee;
+        }
+
+        #enginesettings #blackengineprotocol {
+            margin-left: 10px;
+            min-width: 120px;
+            background: #eee;
+        }
+
+        #enginesettings #whitedepth {
+            width: 5%;
+            padding: 2px 0 2px 6px;
+            border: 1px solid #ddd;
+        }
+
+        #enginesettings #whitemovetime {
+            width: 5%;
+            padding: 2px 0 2px 6px;
+            border: 1px solid #ddd;
+        }
+
+        #enginesettings #whitenodes {
+            width: 5%;
+            padding: 2px 0 2px 6px;
+            border: 1px solid #ddd;
+        }
+
+        #enginesettings #blackdepth {
+            width: 5%;
+            padding: 2px 0 2px 6px;
+            border: 1px solid #ddd;
+        }
+
+        #enginesettings #blackmovetime {
+            width: 5%;
+            padding: 2px 0 2px 6px;
+            border: 1px solid #ddd;
+        }
+
+        #enginesettings #blacknodes {
+            width: 5%;
+            padding: 2px 0 2px 6px;
+            border: 1px solid #ddd;
+        }
+
+    #enginesettingspopup {
+        display: none;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: white;
+        border-radius: 5px;
+        overflow: scroll;
+    }
+
+        #enginesettingspopup button {
+            display: inline-block;
+            padding: 3px 6px 3px 6px;
+            background: #888;
+            color: #fff;
+            font-weight: bold;
+            margin-left: 6px;
+            margin-right: 6px;
+            cursor: pointer;
+        }
+
+        #enginesettingspopup input {
+            padding: 2px 0 2px 6px;
+            border: 1px solid #ddd;
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+
+        #enginesettingspopup select {
+            min-width: 120px;
+            background: #eee;
+            margin-left: 6px;
+            margin-right: 6px;
+        }
 </style>
 
 <body>
@@ -594,6 +752,7 @@
             if (typeof Atomics !== "object") return false;
             if (typeof SharedArrayBuffer !== "function") { console.log("SharedArrayBuffer not enabled!"); return false; }
             if (typeof FileReader === "undefined") { return false; }
+            if (typeof WebSocket === "undefined") { return false; }
             return true;
         };
 
@@ -686,7 +845,7 @@
                     }
                     themesettings = rawText[i].trim().split('|');
                     if (themesettings.length != 3) {
-                        console.warn(`At line ${i} in paragraph of themes.html: Bad syntax\n`);
+                        console.warn(`At line ${i} in themes.txt: Bad syntax\n`);
                         continue;
                     }
                     themeavailable = themesettings[1].split(',');
@@ -698,7 +857,7 @@
                         boardthemeavailable = [];
                     }
                     if ((themesettings[1].length < 1 && themesettings[2].length < 1) || (themeavailable.includes("") || boardthemeavailable.includes(""))) {
-                        console.warn(`At line ${i} in paragraph of themes.html: Piece and Board style names must not be both null or contain null element\n`);
+                        console.warn(`At line ${i} in themes.txt: Piece and Board style names must not be both null or contain null element\n`);
                         continue;
                     }
                     if (themesettings[1].length > 0) {
@@ -710,7 +869,7 @@
                                 themeavailable = themeavailable.concat(themes[1][index]);
                             }
                             else {
-                                console.warn(`At line ${i} in paragraph of themes.html: Variant ${require_list[j].substring(1)} has not been defined yet. You need to put it before this line.\n`);
+                                console.warn(`At line ${i} in themes.txt: Variant ${require_list[j].substring(1)} has not been defined yet. You need to put it before this line.\n`);
                             }
                         }
                         themeavailable = uniqArr(themeavailable);
@@ -724,7 +883,7 @@
                                 boardthemeavailable = boardthemeavailable.concat(themes[2][index]);
                             }
                             else {
-                                console.warn(`At line ${i} in paragraph of themes.html: Variant ${require_board_list[j].substring(1)} has not been defined yet. You need to put it before this line.\n`);
+                                console.warn(`At line ${i} in themes.txt: Variant ${require_board_list[j].substring(1)} has not been defined yet. You need to put it before this line.\n`);
                             }
                         }
                         boardthemeavailable = uniqArr(boardthemeavailable);
@@ -788,6 +947,311 @@
             });
         }
 
+        const ConvertFENtoSFEN = (fen) => {
+            if (typeof fen != "string") {
+                return null;
+            }
+            let fen_list = fen.trim().split(' ');
+            let sfen = ["", "", "", ""];
+            if (fen_list.length != 6 && fen_list.length != 7) {
+                return null;
+            }
+            if (!fen_list[0].includes("[") || !fen_list[0].includes("]")) {
+                if (fen_list[0].indexOf('[') >= 0 || fen_list[0].indexOf(']') >= 0) {
+                    return null;
+                }
+                sfen[0] = fen_list[0];
+                sfen[2] = "";
+            }
+            else {
+                if (fen_list[0].indexOf('[') > fen_list[0].indexOf(']') || fen_list[0].indexOf(']') < 0) {
+                    return null;
+                }
+                sfen[0] = fen_list[0].substring(0, fen_list[0].indexOf('['));
+                sfen[2] = fen_list[0].substring(fen_list[0].indexOf('[') + 1, fen_list[0].indexOf(']'));
+            }
+            if (fen_list[1] == "w") {
+                sfen[1] = "b";
+            }
+            else if (fen_list[1] == "b") {
+                sfen[1] = "w";
+            }
+            else {
+                return null;
+            }
+            if (sfen[2].length == 0) {
+                sfen[2] = "-";
+            }
+            else {
+                const charCount = sfen[2].split("").reduce((pre, cur) => {
+                    if (cur in pre) {
+                        pre[cur]++;
+                    } else {
+                        pre[cur] = 1;
+                    }
+                    return pre;
+                }, {});
+                sfen[2] = "";
+                let ch;
+                for (ch in charCount) {
+                    if (charCount[ch] > 1) {
+                        sfen[2] += (ch.toString() + charCount[ch].toString());
+                    }
+                    else {
+                        sfen[2] += (ch.toString());
+                    }
+                }
+            }
+            if (parseInt(fen_list.at(-1)) != NaN) {
+                sfen[3] = parseInt(fen_list.at(-1)).toString();
+            }
+            else {
+                return null;
+            }
+            return sfen.join(' ');
+        }
+
+        const convertUCImovestoUSImoves = (moves, board_width, board_height) => {
+            const chartoindex = ["z", "y", "x", "w", "v", "u", "t", "s", "r", "q", "p", "o", "n", "m", "l", "k", "j", "i", "h", "g", "f", "e", "d", "c", "b", "a"];
+            if (typeof moves != "string" || typeof board_width != "number" || typeof board_height != "number") {
+                return null;
+            }
+            if (board_width < 1 || board_height < 1) {
+                return null;
+            }
+            let movelist = moves.trim().split(' ');
+            try {
+                movelist.forEach((val, ind) => {
+                    if (val.length < 1) {
+                        return;
+                    }
+                    let newmovenotation = "";
+                    let move = val;
+                    let isPromotion = (val.at(-1) == "+");
+                    let isDemotion = (val.at(-1) == "-");
+                    let i = 0;
+                    if (!/^([+]?[A-Za-z]@)([a-z][0-9]+)[+-]?$/.test(val) && !/^([a-z][0-9]+){2}[+-]?$/.test(val)) {
+                        throw SyntaxError;
+                    }
+                    if (isDemotion || isPromotion) {
+                        move = move.substring(0, move.length - 1);
+                    }
+                    if (val.includes("@")) {
+                        let atind = val.indexOf("@");
+                        newmovenotation = val.replace("@", "*").substring(0, atind + 1);
+                        move = move.substring(atind + 1);
+                    }
+                    let files = move.split(/[0-9]+/).filter((str) => {
+                        return str != "";
+                    });
+                    let ranks = move.split(/[a-z]/).filter((str) => {
+                        return str != "";
+                    });
+                    if (ranks.length != files.length) {
+                        throw SyntaxError;
+                    }
+                    ranks.forEach((rval, rind) => {
+                        if (parseInt(rval) < 1 || parseInt(rval) > board_height) {
+                            throw RangeError;
+                        }
+                        ranks[rind] = chartoindex[chartoindex.length - board_height + parseInt(rval) - 1];
+                    });
+                    files.forEach((fval, find) => {
+                        if (fval < "a" || fval > chartoindex.at(-board_width)) {
+                            throw RangeError;
+                        }
+                        files[find] = (chartoindex.indexOf(fval) + board_width - chartoindex.length + 1).toString();
+                    })
+                    movelist[ind] = newmovenotation;
+                    for (i = 0; i < ranks.length; i++) {
+                        movelist[ind] += `${files[i]}${ranks[i]}`;
+                    }
+                    if (isDemotion) {
+                        movelist[ind] += "-";
+                    }
+                    else if (isPromotion) {
+                        movelist[ind] += "+";
+                    }
+                });
+            }
+            catch {
+                return null;
+            }
+            return movelist.join(' ');
+        }
+
+        const convertUCImovestoUCCImoves = (moves, board_width, board_height) => {
+            const chartoindex = ["z", "y", "x", "w", "v", "u", "t", "s", "r", "q", "p", "o", "n", "m", "l", "k", "j", "i", "h", "g", "f", "e", "d", "c", "b", "a"];
+            if (typeof moves != "string" || typeof board_width != "number" || typeof board_height != "number") {
+                return null;
+            }
+            if (board_width < 1 || board_height < 1) {
+                return null;
+            }
+            let movelist = moves.trim().split(' ');
+            try {
+                movelist.forEach((val, ind) => {
+                    if (val.length < 1) {
+                        return;
+                    }
+                    let move = val;
+                    let i = 0;
+                    if (!/^([a-z][0-9]+){2}$/.test(val)) {
+                        throw SyntaxError;
+                    }
+                    let files = move.split(/[0-9]+/).filter((str) => {
+                        return str != "";
+                    });
+                    let ranks = move.split(/[a-z]/).filter((str) => {
+                        return str != "";
+                    });
+                    if (ranks.length != files.length) {
+                        throw SyntaxError;
+                    }
+                    ranks.forEach((rval, rind) => {
+                        if (parseInt(rval) < 1 || parseInt(rval) > board_height) {
+                            throw RangeError;
+                        }
+                        ranks[rind] = parseInt(rval) - 1;
+                    });
+                    files.forEach((fval, find) => {
+                        if (fval < "a" || fval > chartoindex.at(-board_width)) {
+                            throw RangeError;
+                        }
+                    })
+                    movelist[ind] = "";
+                    for (i = 0; i < ranks.length; i++) {
+                        movelist[ind] += `${files[i]}${ranks[i]}`;
+                    }
+                });
+            }
+            catch {
+                return null;
+            }
+            return movelist.join(' ');
+        }
+
+        const convertUSImovestoUCImoves = (moves, board_width, board_height) => {
+            const chartoindex = ["z", "y", "x", "w", "v", "u", "t", "s", "r", "q", "p", "o", "n", "m", "l", "k", "j", "i", "h", "g", "f", "e", "d", "c", "b", "a"];
+            if (typeof moves != "string" || typeof board_width != "number" || typeof board_height != "number") {
+                return null;
+            }
+            if (board_width < 1 || board_height < 1) {
+                return null;
+            }
+            let movelist = moves.trim().split(' ');
+            try {
+                movelist.forEach((val, ind) => {
+                    if (val.length < 1) {
+                        return;
+                    }
+                    let newmovenotation = "";
+                    let move = val;
+                    let isPromotion = (val.at(-1) == "+");
+                    let isDemotion = (val.at(-1) == "-");
+                    let i = 0;
+                    if (!/^([+]?[A-Za-z]\*)([0-9]+[a-z])[+-]?$/.test(val) && !/^([0-9]+[a-z]){2}[+-]?$/.test(val)) {
+                        throw SyntaxError;
+                    }
+                    if (isDemotion || isPromotion) {
+                        move = move.substring(0, move.length - 1);
+                    }
+                    if (val.includes("*")) {
+                        let atind = val.indexOf("*");
+                        newmovenotation = val.replace("*", "@").substring(0, atind + 1);
+                        move = move.substring(atind + 1);
+                    }
+                    let files = move.split(/[a-z]/).filter((str) => {
+                        return str != "";
+                    });
+                    let ranks = move.split(/[0-9]+/).filter((str) => {
+                        return str != "";
+                    });
+                    if (ranks.length != files.length) {
+                        throw SyntaxError;
+                    }
+                    ranks.forEach((rval, rind) => {
+                        if (rval < "a" || rval > chartoindex.at(-board_width)) {
+                            throw RangeError;
+                        }
+                        ranks[rind] = (chartoindex.indexOf(rval) + board_width - chartoindex.length + 1).toString();
+                    });
+                    files.forEach((fval, find) => {
+                        
+                        if (parseInt(fval) < 1 || parseInt(fval) > board_height) {
+                            throw RangeError;
+                        }
+                        files[find] = chartoindex[chartoindex.length - board_height + parseInt(fval) - 1];
+                    })
+                    movelist[ind] = newmovenotation;
+                    for (i = 0; i < ranks.length; i++) {
+                        movelist[ind] += `${files[i]}${ranks[i]}`;
+                    }
+                    if (isDemotion) {
+                        movelist[ind] += "-";
+                    }
+                    else if (isPromotion) {
+                        movelist[ind] += "+";
+                    }
+                });
+            }
+            catch {
+                return null;
+            }
+            return movelist.join(' ');
+        }
+
+        const convertUCCImovestoUCImoves = (moves, board_width, board_height) => {
+            const chartoindex = ["z", "y", "x", "w", "v", "u", "t", "s", "r", "q", "p", "o", "n", "m", "l", "k", "j", "i", "h", "g", "f", "e", "d", "c", "b", "a"];
+            if (typeof moves != "string" || typeof board_width != "number" || typeof board_height != "number") {
+                return null;
+            }
+            if (board_width < 1 || board_height < 1) {
+                return null;
+            }
+            let movelist = moves.trim().split(' ');
+            try {
+                movelist.forEach((val, ind) => {
+                    if (val.length < 1) {
+                        return;
+                    }
+                    let move = val;
+                    let i = 0;
+                    if (!/^([a-z][0-9]+){2}$/.test(val)) {
+                        throw SyntaxError;
+                    }
+                    let files = move.split(/[0-9]+/).filter((str) => {
+                        return str != "";
+                    });
+                    let ranks = move.split(/[a-z]/).filter((str) => {
+                        return str != "";
+                    });
+                    if (ranks.length != files.length) {
+                        throw SyntaxError;
+                    }
+                    ranks.forEach((rval, rind) => {
+                        if (parseInt(rval) < 0 || parseInt(rval) > board_height - 1) {
+                            throw RangeError;
+                        }
+                        ranks[rind] = parseInt(rval) + 1;
+                    });
+                    files.forEach((fval, find) => {
+                        if (fval < "a" || fval > chartoindex.at(-board_width)) {
+                            throw RangeError;
+                        }
+                    })
+                    movelist[ind] = "";
+                    for (i = 0; i < ranks.length; i++) {
+                        movelist[ind] += `${files[i]}${ranks[i]}`;
+                    }
+                });
+            }
+            catch {
+                return null;
+            }
+            return movelist.join(' ');
+        }
+
         const App = () => {
             let stockfish = null;
             let stockfish_state = "INIT"; // 'READY', 'FAILED'
@@ -811,46 +1275,1309 @@
             let white_timer_type = "infinite";
             let black_timer_type = "infinite";
             let timer_interval = 100;
+            let white_byoyomi_time_per_period = 0;
+            let black_byoyomi_time_per_period = 0;
+            let white_byoyomi_period_count = 0;
+            let black_byoyomi_period_count = 0;
+            let white_remaining_byoyomi_periods = 0;
+            let black_remaining_byoyomi_periods = 0;
             let white_time_margin = 0;
             let black_time_margin = 0;
             let previous_mover = "";
             let timer;
+            let WebSocketStatus = "Unestablished";
+            let white_engine = "";
+            let black_engine = "";
+            let loading_engine_white = false;
+            let loading_engine_black = false;
+            let white_engine_protocol = "UCI";
+            let black_engine_protocol = "UCI";
+            let white_engine_name = "";
+            let white_engine_author = "";
+            let black_engine_name = "";
+            let black_engine_author = "";
+            let white_engine_options = [];
+            let black_engine_options = [];
+            let white_engine_datastream = "";
+            let black_engine_datastream = "";
+            let white_engine_variants = [];
+            let black_engine_variants = [];
+            let white_engine_has_variants_option = false;
+            let black_engine_has_variants_option = false;
+            let using_white_engine = false;
+            let using_black_engine = false;
+            let white_engine_ponder = false;
+            let black_engine_ponder = false;
+            let white_engine_ponder_move = "0000";
+            let black_engine_ponder_move = "0000";
+            let white_engine_ponder_miss = false;
+            let black_engine_ponder_miss = false;
+            let changing_engine_settings = false;
+            const load_engine_timeout = 10000;
+            let ws = null;
 
             let variants = [];
+
+            const checkconnectionnumber = parseInt(Math.random() * 100000);
+            let wsport = window.location.port;
+            if (wsport == "") {
+                wsport = 5001;
+            }
+            else {
+                wsport = (+wsport) + 1;
+            }
+
+            try {
+                ws = new WebSocket("ws://" + window.location.hostname + ":" + wsport.toString());
+
+                ws.addEventListener('open', function (event) {
+                    ws.send(`CONNECT|${checkconnectionnumber}`);
+                });
+
+                ws.addEventListener('message', function (event) {
+                    if (typeof event.data != "string") {
+                        console.error(`Received bad data type from server: ${typeof event.data}`);
+                        ws.close();
+                        WebSocketStatus = "ERROR";
+                        return;
+                    }
+                    let msg = event.data.split('|');
+                    if (WebSocketStatus == "Unestablished") {
+                        if (event.data == `${checkconnectionnumber}`) {
+                            console.log("WebSocket connection established.");
+                            WebSocketStatus = "CONNECTED";
+                            ws.send("READYOK");
+                        }
+                        else {
+                            console.error("WebSocket Server conncetion failed: Server returns bad verification code.");
+                            ws.close();
+                            WebSocketStatus = "ERROR";
+                        }
+                    }
+                    else if (WebSocketStatus == "CONNECTED") {
+                        if (msg[0] == "ERROR") {
+                            if (msg[1] == "LOAD_ENGINE") {
+                                console.error("Failed to load engine for " + msg[2]);
+                                if (msg[2] == "WHITE") {
+                                    loading_engine_white = false;
+                                    white_engine = "";
+                                    window.alert("Engine WHITE exited unexpectedly.");
+                                    if ($("#label-stm").innerText == "white") {
+                                        play_move = false;
+                                    }
+                                }
+                                else if (msg[2] == "BLACK") {
+                                    loading_engine_black = false;
+                                    black_engine = "";
+                                    window.alert("Engine BLACK exited unexpectedly.");
+                                    if ($("#label-stm").innerText == "black") {
+                                        play_move = false;
+                                    }
+                                }
+                            }
+                            else if (msg[1] == "ENGINE_TIMEOUT") {
+                                console.error("Engine timed out: " + msg[2]);
+                                if (msg[2] == "WHITE") {
+                                    loading_engine_white = false;
+                                    white_engine = "";
+                                    window.alert("Engine WHITE load timed out.");
+                                }
+                                else if (msg[2] == "BLACK") {
+                                    loading_engine_black = false;
+                                    black_engine = "";
+                                    window.alert("Engine BLACK load timed out.");
+                                }
+                            }
+                        }
+                        else if (msg[0] == "ENGINE_INFO") {
+                            if (msg[1] == "WHITE") {
+                                white_engine_datastream += msg[2].replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+                            }
+                            else if (msg[1] == "BLACK") {
+                                black_engine_datastream += msg[2].replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+                            }
+                            //console.log(event.data);
+                            let i = 0;
+                            if (loading_engine_white || loading_engine_black) {
+                                if (msg[1] == "WHITE" && (white_engine_datastream.includes("uciok") || white_engine_datastream.includes("usiok") || white_engine_datastream.includes("ucciok"))) {
+                                    let engine_info = white_engine_datastream.split('\n');
+                                    for (i = 0; i < engine_info.length; i++) {
+                                        if (engine_info[i].startsWith("id name")) {
+                                            white_engine_name = engine_info[i].split(' ').slice(2).join(' ');
+                                        }
+                                        else if (engine_info[i].startsWith("id author")) {
+                                            white_engine_author = engine_info[i].split(' ').slice(2).join(' ');
+                                        }
+                                        else if (engine_info[i].startsWith("option ")) {
+                                            let options = engine_info[i].split(' ');
+                                            let optionname = options.slice(2, options.indexOf("type")).join(' ');
+                                            if (white_engine_protocol == "UCCI") {
+                                                optionname = options.slice(1, options.indexOf("type")).join(' ');
+                                            }
+                                            let optiontype = options[options.indexOf("type") + 1];
+                                            if (optiontype == "button") {
+                                                white_engine_options.push({
+                                                    name: optionname,
+                                                    type: optiontype,
+                                                    default: null,
+                                                    min: null,
+                                                    max: null,
+                                                    values: null,
+                                                    current: null,
+                                                });
+                                                continue;
+                                            }
+                                            let optiondefault = options[options.indexOf("default") + 1];
+                                            if (optiontype == "check" || optiontype == "string") {
+                                                white_engine_options.push({
+                                                    name: optionname,
+                                                    type: optiontype,
+                                                    default: optiondefault,
+                                                    min: null,
+                                                    max: null,
+                                                    values: null,
+                                                    current: null,
+                                                });
+                                                if (optionname == "Ponder" || optionname == "USI_Ponder" || optionname == "UCCI_Ponder") {
+                                                    if (optiondefault == "true") {
+                                                        white_engine_ponder = true;
+                                                    }
+                                                    else {
+                                                        white_engine_ponder = false;
+                                                    }
+                                                }
+                                            }
+                                            else if (optiontype == "spin") {
+                                                white_engine_options.push({
+                                                    name: optionname,
+                                                    type: optiontype,
+                                                    default: optiondefault,
+                                                    min: options[options.indexOf("min") + 1],
+                                                    max: options[options.indexOf("max") + 1],
+                                                    values: null,
+                                                    current: null,
+                                                });
+                                            }
+                                            else if (optiontype == "combo") {
+                                                let dropdownoptions = options.slice(options.indexOf("default") + 1).join(' ').split(" var ").slice(1);
+                                                white_engine_options.push({
+                                                    name: optionname,
+                                                    type: optiontype,
+                                                    default: optiondefault,
+                                                    min: null,
+                                                    max: null,
+                                                    values: dropdownoptions,
+                                                    current: null,
+                                                });
+                                                if (optionname == "UCI_Variant" || optionname == "USI_Variant" || optionname == "UCCI_Variant") {
+                                                    white_engine_variants = dropdownoptions.slice(0);
+                                                    white_engine_has_variants_option = true;
+                                                }
+                                            }
+                                            else {
+                                                console.warn("Unknown option type:" + optiontype + ".\nThis option will be ignored.");
+                                            }
+                                        }
+                                        else if (engine_info[i].startsWith("uciok") || engine_info[i].startsWith("usiok") || engine_info[i].startsWith("ucciok")) {
+                                            console.log("White Engine loaded.");
+                                            console.log(`Name: ${white_engine_name}\nAuthor: ${white_engine_author}`);
+                                            console.log(white_engine_options);
+                                            white_engine_datastream = "";
+                                            if (white_engine_variants.length == 0) {
+                                                if (white_engine_protocol == "UCI") {
+                                                    white_engine_variants = ["chess", "fischerandom", ""];
+                                                }
+                                                else if (white_engine_protocol == "USI") {
+                                                    white_engine_variants = ["shogi"];
+                                                }
+                                                else if (white_engine_protocol == "UCCI" || white_engine_protocol == "UCI_CYCLONE") {
+                                                    white_engine_variants = ["xiangqi"];
+                                                }
+                                                white_engine_has_variants_option = false;
+                                            }
+                                            ws.send("POST_MSG|WHITE|isready");
+                                            break;
+                                        }
+                                    }
+                                }
+                                else if (msg[1] == "BLACK" && (black_engine_datastream.includes("uciok") || black_engine_datastream.includes("usiok") || black_engine_datastream.includes("ucciok"))) {
+                                    let engine_info = black_engine_datastream.split('\n');
+                                    for (i = 0; i < engine_info.length; i++) {
+                                        if (engine_info[i].startsWith("id name")) {
+                                            black_engine_name = engine_info[i].split(' ').slice(2).join(' ');
+                                        }
+                                        else if (engine_info[i].startsWith("id author")) {
+                                            black_engine_author = engine_info[i].split(' ').slice(2).join(' ');
+                                        }
+                                        else if (engine_info[i].startsWith("option ")) {
+                                            let options = engine_info[i].split(' ');
+                                            let optionname = options.slice(2, options.indexOf("type")).join(' ');
+                                            if (black_engine_protocol == "UCCI") {
+                                                optionname = options.slice(1, options.indexOf("type")).join(' ');
+                                            }
+                                            let optiontype = options[options.indexOf("type") + 1];
+                                            if (optiontype == "button") {
+                                                black_engine_options.push({
+                                                    name: optionname,
+                                                    type: optiontype,
+                                                    default: null,
+                                                    min: null,
+                                                    max: null,
+                                                    values: null,
+                                                    current: null,
+                                                });
+                                                continue;
+                                            }
+                                            let optiondefault = options[options.indexOf("default") + 1];
+                                            if (optiontype == "check" || optiontype == "string") {
+                                                black_engine_options.push({
+                                                    name: optionname,
+                                                    type: optiontype,
+                                                    default: optiondefault,
+                                                    min: null,
+                                                    max: null,
+                                                    values: null,
+                                                    current: null,
+                                                });
+                                                if (optionname == "Ponder" || optionname == "USI_Ponder" || optionname == "UCCI_Ponder") {
+                                                    if (optiondefault == "true") {
+                                                        black_engine_ponder = true;
+                                                    }
+                                                    else {
+                                                        black_engine_ponder = false;
+                                                    }
+                                                }
+                                            }
+                                            else if (optiontype == "spin") {
+                                                black_engine_options.push({
+                                                    name: optionname,
+                                                    type: optiontype,
+                                                    default: optiondefault,
+                                                    min: options[options.indexOf("min") + 1],
+                                                    max: options[options.indexOf("max") + 1],
+                                                    values: null,
+                                                    current: null,
+                                                });
+                                            }
+                                            else if (optiontype == "combo") {
+                                                let dropdownoptions = options.slice(options.indexOf("default") + 1).join(' ').split(" var ").slice(1);
+                                                black_engine_options.push({
+                                                    name: optionname,
+                                                    type: optiontype,
+                                                    default: optiondefault,
+                                                    min: null,
+                                                    max: null,
+                                                    values: dropdownoptions,
+                                                    current: null,
+                                                });
+                                                if (optionname == "UCI_Variant" || optionname == "USI_Variant" || optionname == "UCCI_Variant") {
+                                                    black_engine_variants = dropdownoptions.slice(0);
+                                                    black_engine_has_variants_option = true;
+                                                }
+                                            }
+                                            else {
+                                                console.warn("Unknown option type:" + optiontype + ".\nThis option will be ignored.");
+                                            }
+                                        }
+                                        else if (engine_info[i].startsWith("uciok") || engine_info[i].startsWith("usiok") || engine_info[i].startsWith("ucciok")) {
+                                            console.log("Black Engine loaded.");
+                                            console.log(`Name: ${black_engine_name}\nAuthor: ${black_engine_author}`);
+                                            console.log(black_engine_options);
+                                            black_engine_datastream = "";
+                                            if (black_engine_variants.length == 0) {
+                                                if (black_engine_protocol == "UCI") {
+                                                    black_engine_variants = ["chess", "fischerandom", ""];
+                                                }
+                                                else if (black_engine_protocol == "USI") {
+                                                    black_engine_variants = ["shogi"];
+                                                }
+                                                else if (black_engine_protocol == "UCCI" || black_engine_protocol == "UCI_CYCLONE") {
+                                                    black_engine_variants = ["xiangqi"];
+                                                }
+                                                black_engine_has_variants_option = false;
+                                            }
+                                            ws.send("POST_MSG|BLACK|isready");
+                                            break;
+                                        }
+                                    }
+                                }
+                                else if (msg[1] == "WHITE" && white_engine_datastream.includes("readyok")) {
+                                    white_engine = $("#whiteenginepath").value;
+                                    loading_engine_white = false;
+                                    ws.send("ENGINE_READY|WHITE");
+                                    console.log("White engine is ready.");
+                                    if (white_engine_variants.includes($("#dropdown-variant").value)) {
+                                        using_white_engine = true;
+                                        $("#whiteunsupportedvariant").hidden = true;
+                                        if (white_engine_has_variants_option) {
+                                            if (white_engine_protocol == "UCI" || white_engine_protocol == "UCI_CYCLONE") {
+                                                postMessageToEngine("WHITE", `setoption name UCI_Variant value ${$("#dropdown-variant").value}`, true);
+                                            }
+                                            else if (white_engine_protocol == "USI") {
+                                                postMessageToEngine("WHITE", `setoption name USI_Variant value ${$("#dropdown-variant").value}`, true);
+                                            }
+                                            else if (white_engine_protocol == "UCCI") {
+                                                postMessageToEngine("WHITE", `setoption name UCCI_Variant value ${$("#dropdown-variant").value}`, true);
+                                            }
+                                        }
+                                        if (white_engine_protocol == "UCI" || white_engine_protocol == "UCI_CYCLONE") {
+                                            postMessageToEngine("WHITE", "ucinewgame", true);
+                                        }
+                                        else if (white_engine_protocol == "USI") {
+                                            postMessageToEngine("WHITE", "usinewgame", true);
+                                        }
+                                        else if (white_engine_protocol == "UCCI") {
+                                            postMessageToEngine("WHITE", "uccinewgame", true);
+                                        }
+                                        postMessageToEngine("WHITE", "position startpos", true);
+                                    }
+                                    else {
+                                        console.log("Engine WHITE: " + white_engine_name + " does not support variant " + $("#dropdown-variant").value + ". Fairy Stockfish WASM will be used instead.");
+                                        using_white_engine = false;
+                                        $("#whiteunsupportedvariant").hidden = false;
+                                    }
+                                    white_engine_datastream = "";
+                                    if (white_engine_protocol == "UCI" || white_engine_protocol == "UCI_CYCLONE") {
+                                        output2 += ("Engine WHITE:\nName: " + white_engine_name + "\nAuthor: " + white_engine_author + "\nuciok\n");
+                                    }
+                                    else if (white_engine_protocol == "USI") {
+                                        output2 += ("Engine WHITE:\nName: " + white_engine_name + "\nAuthor: " + white_engine_author + "\nusiok\n");
+                                    }
+                                    else if (white_engine_protocol == "UCCI") {
+                                        output2 += ("Engine WHITE:\nName: " + white_engine_name + "\nAuthor: " + white_engine_author + "\nucciok\n");
+                                    }
+                                    $("#output2").innerText = output2;
+                                    scrollOutput();
+                                }
+                                else if (msg[1] == "BLACK" && black_engine_datastream.includes("readyok")) {
+                                    black_engine = $("#blackenginepath").value;
+                                    loading_engine_black = false;
+                                    ws.send("ENGINE_READY|BLACK");
+                                    console.log("Black engine is ready.");
+                                    if (black_engine_variants.includes($("#dropdown-variant").value)) {
+                                        using_black_engine = true;
+                                        $("#blackunsupportedvariant").hidden = true;
+                                        if (black_engine_has_variants_option) {
+                                            if (black_engine_protocol == "UCI" || black_engine_protocol == "UCI_CYCLONE") {
+                                                postMessageToEngine("BLACK", `setoption name UCI_Variant value ${$("#dropdown-variant").value}`, true);
+                                            }
+                                            else if (black_engine_protocol == "USI") {
+                                                postMessageToEngine("BLACK", `setoption name USI_Variant value ${$("#dropdown-variant").value}`, true);
+                                            }
+                                            else if (black_engine_protocol == "UCCI") {
+                                                postMessageToEngine("BLACK", `setoption name UCCI_Variant value ${$("#dropdown-variant").value}`, true);
+                                            }
+                                        }
+                                        if (black_engine_protocol == "UCI" || black_engine_protocol == "UCI_CYCLONE") {
+                                            postMessageToEngine("BLACK", "ucinewgame", true);
+                                        }
+                                        else if (black_engine_protocol == "USI") {
+                                            postMessageToEngine("BLACK", "usinewgame", true);
+                                        }
+                                        else if (black_engine_protocol == "UCCI") {
+                                            postMessageToEngine("BLACK", "uccinewgame", true);
+                                        }
+                                        postMessageToEngine("BLACK", "position startpos", true);
+                                    }
+                                    else {
+                                        console.log("Engine BLACK: " + black_engine_name + " does not support variant " + $("#dropdown-variant").value + ". Fairy Stockfish WASM will be used instead.");
+                                        using_black_engine = false;
+                                        $("#blackunsupportedvariant").hidden = false;
+                                    }
+                                    black_engine_datastream = "";
+                                    if (black_engine_protocol == "UCI" || black_engine_protocol == "UCI_CYCLONE") {
+                                        output2 += ("Engine BLACK:\nName: " + black_engine_name + "\nAuthor: " + black_engine_author + "\nuciok\n");
+                                    }
+                                    else if (black_engine_protocol == "USI") {
+                                        output2 += ("Engine BLACK:\nName: " + black_engine_name + "\nAuthor: " + black_engine_author + "\nusiok\n");
+                                    }
+                                    else if (black_engine_protocol == "UCCI") {
+                                        output2 += ("Engine BLACK:\nName: " + black_engine_name + "\nAuthor: " + black_engine_author + "\nucciok\n");
+                                    }
+                                    $("#output2").innerText = output2;
+                                    scrollOutput();
+                                }
+                            }
+                            else if (changing_engine_settings) {
+                                if (msg[1] == "WHITE" && white_engine_datastream.includes("info string ") && (white_engine_datastream.match(/info string /g) || []).length == (white_engine_datastream.replace(/\r\n/g, "\n").replace(/\r/g, "\n").match(/\n/g) || []).length) {
+                                    let engine_info = white_engine_datastream.replace(/\r\n/g, "\n").replace(/\r/g, "\n").split('\n');
+                                    let buffer = "";
+                                    for (i = 0; i < engine_info.length; i++) {
+                                        if (engine_info[i].startsWith("info string ")) {
+                                            buffer += engine_info[i].split(' ').slice(2).join(' ');
+                                        }
+                                    }
+                                    white_engine_datastream = "";
+                                    console.log("Message from engine WHITE: ", buffer);
+                                    window.alert(`Message from engine WHITE: ${buffer}`);
+                                }
+                                else if (msg[1] == "BLACK" && black_engine_datastream.includes("info string ") && (black_engine_datastream.match(/info string /g) || []).length == (black_engine_datastream.replace(/\r\n/g, "\n").replace(/\r/g, "\n").match(/\n/g) || []).length) {
+                                    let engine_info = black_engine_datastream.replace(/\r\n/g, "\n").replace(/\r/g, "\n").split('\n');
+                                    let buffer = "";
+                                    for (i = 0; i < engine_info.length; i++) {
+                                        if (engine_info[i].startsWith("info string ")) {
+                                            buffer += engine_info[i].split(' ').slice(2).join(' ');
+                                        }
+                                    }
+                                    black_engine_datastream = "";
+                                    console.log("Message from engine BLACK: ", buffer);
+                                    window.alert(`Message from engine BLACK: ${buffer}`);
+                                }
+                            }
+                            else {
+                                if (msg[1] == "WHITE" && $("#label-stm").innerText == "white") {
+                                    output2 += msg[2];
+                                    $("#output2").innerText = output2;
+                                    scrollOutput();
+                                    if (review_mode) {
+                                        white_engine_datastream = "";
+                                        return;
+                                    }
+                                    if (/[\r\n]+/.test(msg[2])) {
+                                        let white_bestmove_index = white_engine_datastream.indexOf("bestmove");
+                                        if (white_bestmove_index >= 0 && white_engine_datastream.lastIndexOf('\n') > white_bestmove_index) {
+                                            if (play_white) {
+                                                if (white_engine_ponder && white_engine_ponder_miss) {
+                                                    white_engine_ponder_miss = false;
+                                                }
+                                                else {
+                                                    let bestmoveline = white_engine_datastream.substring(white_bestmove_index).replace(/[\r\n]/g, " ").split(' ');
+                                                    play_move = false;
+                                                    if (bestmoveline[1] == "resign" || bestmoveline[2] == "resign") {
+                                                        alert(white_engine_name + " (WHITE) has resigned.");
+                                                    }
+                                                    else if (bestmoveline[1] != "0000") {
+                                                        if (white_engine_protocol == "UCI") {
+                                                            $("#move").value += (" " + bestmoveline[1]);
+                                                            white_engine_ponder_move = bestmoveline[3];
+                                                        }
+                                                        else if (white_engine_protocol == "USI") {
+                                                            $("#move").value += (" " + convertUSImovestoUCImoves(bestmoveline[1], 9, 9));
+                                                            white_engine_ponder_move = convertUSImovestoUCImoves(bestmoveline[3], 9, 9);
+                                                        }
+                                                        else if (white_engine_protocol == "UCCI" || white_engine_protocol == "UCI_CYCLONE") {
+                                                            $("#move").value += (" " + convertUCCImovestoUCImoves(bestmoveline[1], 9, 10));
+                                                            if (bestmoveline[2] == "draw") {
+                                                                white_engine_ponder_move = convertUCCImovestoUCImoves(bestmoveline[4], 9, 10);
+                                                            }
+                                                            else {
+                                                                white_engine_ponder_move = convertUCCImovestoUCImoves(bestmoveline[3], 9, 10);
+                                                            }
+                                                        }
+                                                        if (white_engine_ponder_move == undefined) {
+                                                            white_engine_ponder_move = "0000";
+                                                        }
+                                                        $("#set").click();
+                                                    }
+                                                }
+                                            }
+                                            white_engine_datastream = "";
+                                        }
+                                        else {
+                                            white_engine_datastream = white_engine_datastream.substring(white_engine_datastream.indexOf('\n') + 1);
+                                        }
+                                    }
+                                }
+                                else if (msg[1] == "BLACK" && $("#label-stm").innerText == "black") {
+                                    output2 += msg[2];
+                                    $("#output2").innerText = output2;
+                                    scrollOutput();
+                                    if (review_mode) {
+                                        black_engine_datastream = "";
+                                        return;
+                                    }
+                                    if (/[\r\n]+/.test(msg[2])) {
+                                        let black_bestmove_index = black_engine_datastream.indexOf("bestmove");
+                                        if (black_bestmove_index >= 0 && black_engine_datastream.lastIndexOf('\n') > black_bestmove_index) {
+                                            if (play_black) {
+                                                if (black_engine_ponder && black_engine_ponder_miss) {
+                                                    black_engine_ponder_miss = false;
+                                                }
+                                                else {
+                                                    let bestmoveline = black_engine_datastream.substring(black_bestmove_index).replace(/[\r\n]/g, " ").split(' ');
+                                                    play_move = false;
+                                                    if (bestmoveline[1] == "resign" || bestmoveline[2] == "resign") {
+                                                        alert(black_engine_name + " (BLACK) has resigned.");
+                                                    }
+                                                    else if (bestmoveline[1] != "0000") {
+                                                        if (black_engine_protocol == "UCI") {
+                                                            $("#move").value += (" " + bestmoveline[1]);
+                                                            black_engine_ponder_move = bestmoveline[3];
+                                                        }
+                                                        else if (black_engine_protocol == "USI") {
+                                                            $("#move").value += (" " + convertUSImovestoUCImoves(bestmoveline[1], 9, 9));
+                                                            black_engine_ponder_move = convertUSImovestoUCImoves(bestmoveline[3], 9, 9);
+                                                        }
+                                                        else if (black_engine_protocol == "UCCI" || black_engine_protocol == "UCI_CYCLONE") {
+                                                            $("#move").value += (" " + convertUCCImovestoUCImoves(bestmoveline[1], 9, 10));
+                                                            if (bestmoveline[2] == "draw") {
+                                                                black_engine_ponder_move = convertUCCImovestoUCImoves(bestmoveline[4], 9, 10);
+                                                            }
+                                                            else {
+                                                                black_engine_ponder_move = convertUCCImovestoUCImoves(bestmoveline[3], 9, 10);
+                                                            }
+                                                        }
+                                                        if (black_engine_ponder_move == undefined) {
+                                                            black_engine_ponder_move = "0000";
+                                                        }
+                                                        $("#set").click();
+                                                    }
+                                                }
+                                            }
+                                            black_engine_datastream = "";
+                                        }
+                                        else {
+                                            black_engine_datastream = black_engine_datastream.substring(black_engine_datastream.indexOf('\n') + 1);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        else if (msg[0] == "ENGINE_ERROR") {
+                            if (/^[ ]*$/.test(msg[2])) {
+                                return;
+                            }
+                            console.error("Engine " + msg[1] + " Error: " + msg[2]);
+                            if (!/[A-Za-z0-9]+/.test(msg[2])) {
+                                return;
+                            }
+                            window.alert("Engine " + msg[1] + " Error:\n" + msg[2]);
+                        }
+                    }
+                });
+
+                ws.addEventListener('close', function (event) {
+                    let { code, reason, wasClen } = event;
+                    if (WebSocketStatus == "ERROR") {
+                        return;
+                    }
+                    ws.send('WebSocket Closed.');
+                    WebSocketStatus = "CLOSED";
+                });
+
+                ws.addEventListener('error', function (event) {
+                    WebSocketStatus = "ERROR";
+                    console.error("Errors occurred during establishing WebSocket connection.");
+                });
+            }
+            catch {
+                console.warn("Cannot initiate WebSocket connection. Binary engine loading feature will be disabled.");
+                ws = null;
+                WebSocketStatus = "ERROR";
+            }
+
+            const EditEngineSettings = (color, ws) => {
+                while (document.getElementById("enginesettingspopup") != null) {
+                    document.getElementById("enginesettingspopup").remove();
+                }
+                if (color == "WHITE" && white_engine == "") {
+                    console.log("Engine is not loaded for white.");
+                    return;
+                }
+                if (color == "BLACK" && black_engine == "") {
+                    console.log("Engine is not loaded for black.");
+                    return;
+                }
+                if (loading_engine_white || loading_engine_black) {
+                    console.log("Loading engines.");
+                    return;
+                }
+                let popup = document.createElement("div");
+                popup.id = "enginesettingspopup";
+                let title = document.createElement("p");
+                title.id = "popup-title";
+                let engine_protocol = document.createElement("p");
+                engine_protocol.id = "engineprotocol";
+                let colorofsettings = document.createElement("p");
+                colorofsettings.id = "colorofsettings";
+                colorofsettings.style.display = "hidden";
+                if (color == "WHITE") {
+                    title.innerHTML = "Name: " + white_engine_name + "\nAuthor: " + white_engine_author;
+                    title.style.whiteSpace = "pre-line";
+                    colorofsettings.innerHTML = "WHITE";
+                    engine_protocol.innerHTML = white_engine_protocol;
+                    popup.appendChild(title);
+                    popup.appendChild(engine_protocol);
+                    popup.appendChild(colorofsettings);
+                    let subdiv;
+                    let text;
+                    let input;
+                    let btntext;
+                    white_engine_options.forEach((value, index) => {
+                        subdiv = document.createElement("div");
+                        subdiv.id = value.name.replace(/[ ]/g, "") + "-div";
+                        text = document.createElement("p");
+                        text.innerHTML = value.name;
+                        subdiv.appendChild(text);
+                        if (value.type == "string") {
+                            input = document.createElement("input");
+                            input.value = value.default;
+                            subdiv.appendChild(input);
+                        }
+                        else if (value.type == "check") {
+                            input = document.createElement("input");
+                            input.type = "checkbox";
+                            if (value.default == "true") {
+                                input.checked = true;
+                            }
+                            else {
+                                input.checked = false;
+                            }
+                            subdiv.appendChild(input);
+                        }
+                        else if (value.type == "spin") {
+                            input = document.createElement("input");
+                            input.type = "number";
+                            input.max = value.max;
+                            input.min = value.min;
+                            input.value = value.default;
+                            input.onchange = function () {
+                                if (!/^(\-|\+)?(0|[1-9][0-9]*)$/.test($("#" + value.name.replace(/[ ]/g, "") + "-input").value)) {
+                                    $("#" + value.name.replace(/[ ]/g, "") + "-input").value = parseInt(value.default);
+                                }
+                                else if ($("#" + value.name.replace(/[ ]/g, "") + "-input").value < parseInt(value.min)) {
+                                    $("#" + value.name.replace(/[ ]/g, "") + "-input").value = parseInt(value.min);
+                                }
+                                else if ($("#" + value.name.replace(/[ ]/g, "") + "-input").value > parseInt(value.max)) {
+                                    $("#" + value.name.replace(/[ ]/g, "") + "-input").value = parseInt(value.max);
+                                }
+                            }
+                            subdiv.appendChild(input);
+                        }
+                        else if (value.type == "button") {
+                            input = document.createElement("button");
+                            input.onclick = function () {
+                                if (white_engine_protocol == "UCCI") {
+                                    ws.send("POST_MSG|WHITE|setoption " + value.name);
+                                }
+                                else {
+                                    ws.send("POST_MSG|WHITE|setoption name " + value.name);
+                                }
+                            }
+                            btntext = document.createTextNode(value.name);
+                            input.appendChild(btntext);
+                            subdiv.appendChild(input);
+                        }
+                        else if (value.type == "combo") {
+                            input = document.createElement("select");
+                            let option;
+                            value.values.forEach((opt) => {
+                                option = document.createElement("option");
+                                option.text = opt;
+                                option.value = opt;
+                                input.appendChild(option);
+                            });
+                            subdiv.appendChild(input);
+                            input.childNodes.forEach((combooption, comboindex) => {
+                                if (combooption.innerHTML == white_engine_options[index].default) {
+                                    input.selectedIndex = comboindex;
+                                }
+                            });
+                        }
+                        else {
+                            console.warn("Unknown option type: ", value.type);
+                        }
+                        input.id = value.name.replace(/[ ]/g, "") + "-input";
+                        subdiv.style.display = "flex";
+                        subdiv.style.marginTop = "10px";
+                        popup.appendChild(subdiv);
+                    });
+                }
+                else if (color == "BLACK") {
+                    title.innerHTML = "Name: " + black_engine_name + "\nAuthor: " + black_engine_author;
+                    title.style.whiteSpace = "pre-line";
+                    colorofsettings.innerHTML = "BLACK";
+                    engine_protocol.innerHTML = black_engine_protocol;
+                    popup.appendChild(title);
+                    popup.appendChild(engine_protocol);
+                    popup.appendChild(colorofsettings);
+                    let subdiv;
+                    let text;
+                    let input;
+                    let btntext;
+                    black_engine_options.forEach((value, index) => {
+                        subdiv = document.createElement("div");
+                        subdiv.id = value.name.replace(/[ ]/g, "") + "-div";
+                        text = document.createElement("p");
+                        text.innerHTML = value.name;
+                        subdiv.appendChild(text);
+                        if (value.type == "string") {
+                            input = document.createElement("input");
+                            input.value = value.default;
+                            subdiv.appendChild(input);
+                        }
+                        else if (value.type == "check") {
+                            input = document.createElement("input");
+                            input.type = "checkbox";
+                            if (value.default == "true") {
+                                input.checked = true;
+                            }
+                            else {
+                                input.checked = false;
+                            }
+                            subdiv.appendChild(input);
+                        }
+                        else if (value.type == "spin") {
+                            input = document.createElement("input");
+                            input.type = "number";
+                            input.max = value.max;
+                            input.min = value.min;
+                            input.value = value.default;
+                            input.onchange = function () {
+                                if (!/^(\-|\+)?(0|[1-9][0-9]*)$/.test($("#" + value.name.replace(/[ ]/g, "") + "-input").value)) {
+                                    $("#" + value.name.replace(/[ ]/g, "") + "-input").value = parseInt(value.default);
+                                }
+                                else if ($("#" + value.name.replace(/[ ]/g, "") + "-input").value < parseInt(value.min)) {
+                                    $("#" + value.name.replace(/[ ]/g, "") + "-input").value = parseInt(value.min);
+                                }
+                                else if ($("#" + value.name.replace(/[ ]/g, "") + "-input").value > parseInt(value.max)) {
+                                    $("#" + value.name.replace(/[ ]/g, "") + "-input").value = parseInt(value.max);
+                                }
+                            }
+                            subdiv.appendChild(input);
+                        }
+                        else if (value.type == "button") {
+                            input = document.createElement("button");
+                            input.onclick = function () {
+                                if (black_engine_protocol == "UCCI") {
+                                    ws.send("POST_MSG|BLACK|setoption " + value.name);
+                                }
+                                else {
+                                    ws.send("POST_MSG|BLACK|setoption name " + value.name);
+                                }
+                            }
+                            btntext = document.createTextNode(value.name);
+                            input.appendChild(btntext);
+                            subdiv.appendChild(input);
+                        }
+                        else if (value.type == "combo") {
+                            input = document.createElement("select");
+                            let option;
+                            value.values.forEach((opt) => {
+                                option = document.createElement("option");
+                                option.text = opt;
+                                option.value = opt;
+                                input.appendChild(option);
+                            });
+                            subdiv.appendChild(input);
+                            input.childNodes.forEach((combooption, comboindex) => {
+                                if (combooption.innerHTML == black_engine_options[index].default) {
+                                    input.selectedIndex = comboindex;
+                                }
+                            });
+                        }
+                        else {
+                            console.warn("Unknown option type: ", value.type);
+                        }
+                        input.id = value.name.replace(/[ ]/g, "") + "-input";
+                        subdiv.style.display = "flex";
+                        subdiv.style.marginTop = "10px";
+                        popup.appendChild(subdiv);
+                    });
+                }
+                else {
+                    console.warn("Unknown color: ", color);
+                    return;
+                }
+                let save = document.createElement("button");
+                let savetext = document.createTextNode("Apply Changes");
+                save.onclick = function () {
+                    let Elem = null;
+                    if ($("#colorofsettings").innerHTML == "WHITE") {
+                        white_engine_options.forEach((value, index) => {
+                            if (value.type == "button") {
+                                return;
+                            }
+                            Elem = $("#" + value.name.replace(/[ ]/g, "") + "-input");
+                            if (Elem == null) {
+                                return;
+                            }
+                            if (value.type == "check") {
+                                white_engine_options[index].current = Elem.checked.toString();
+                                if (value.name == "Ponder" || value.name == "USI_Ponder" || value.name == "UCCI_Ponder") {
+                                    if (Elem.checked) {
+                                        white_engine_ponder = true;
+                                    }
+                                    else {
+                                        white_engine_ponder = false;
+                                    }
+                                }
+                            }
+                            else {
+                                white_engine_options[index].current = Elem.value.toString();
+                            }
+                            if (white_engine_protocol == "UCCI") {
+                                ws.send("POST_MSG|WHITE|setoption " + white_engine_options[index].name + " " + white_engine_options[index].current);
+                            }
+                            else {
+                                ws.send("POST_MSG|WHITE|setoption name " + white_engine_options[index].name + " value " + white_engine_options[index].current);
+                            }
+                        });
+                        console.log(white_engine_options);
+                    }
+                    else if ($("#colorofsettings").innerHTML == "BLACK") {
+                        black_engine_options.forEach((value, index) => {
+                            if (value.type == "button") {
+                                return;
+                            }
+                            Elem = $("#" + value.name.replace(/[ ]/g, "") + "-input");
+                            if (Elem == null) {
+                                return;
+                            }
+                            if (value.type == "check") {
+                                black_engine_options[index].current = Elem.checked.toString();
+                                if (value.name == "Ponder" || value.name == "USI_Ponder" || value.name == "UCCI_Ponder") {
+                                    if (Elem.checked) {
+                                        black_engine_ponder = true;
+                                    }
+                                    else {
+                                        black_engine_ponder = false;
+                                    }
+                                }
+                            }
+                            else {
+                                black_engine_options[index].current = Elem.value.toString();
+                            }
+                            if (black_engine_protocol == "UCCI") {
+                                ws.send("POST_MSG|BLACK|setoption " + black_engine_options[index].name + " " + black_engine_options[index].current);
+                            }
+                            else {
+                                ws.send("POST_MSG|BLACK|setoption name " + black_engine_options[index].name + " value " + black_engine_options[index].current);
+                            }
+                        });
+                        console.log(black_engine_options);
+                    }
+                };
+                save.appendChild(savetext);
+                popup.appendChild(save);
+                let showcurrent = document.createElement("button");
+                let showcurrenttext = document.createTextNode("Show Current Value");
+                showcurrent.onclick = function () {
+                    let Elem = null;
+                    if ($("#colorofsettings").innerHTML == "WHITE") {
+                        white_engine_options.forEach((value, index) => {
+                            if (value.type == "button") {
+                                return;
+                            }
+                            Elem = $("#" + value.name.replace(/[ ]/g, "") + "-input");
+                            if (Elem == null || value.current == null) {
+                                return;
+                            }
+                            if (value.type == "check") {
+                                if (white_engine_options[index].current == "true") {
+                                    Elem.checked = true;
+                                }
+                                else {
+                                    Elem.checked = false;
+                                }
+                            }
+                            else if (value.type == "spin") {
+                                Elem.value = parseInt(white_engine_options[index].current);
+                            }
+                            else if (value.type == "combo") {
+                                Elem.childNodes.forEach((combooption, comboindex) => {
+                                    if (combooption.innerHTML == white_engine_options[index].current) {
+                                        Elem.selectedIndex = comboindex;
+                                    }
+                                });
+                            }
+                            else {
+                                Elem.value = white_engine_options[index].current;
+                            }
+                        });
+                        console.log(white_engine_options);
+                    }
+                    else if ($("#colorofsettings").innerHTML == "BLACK") {
+                        black_engine_options.forEach((value, index) => {
+                            if (value.type == "button") {
+                                return;
+                            }
+                            Elem = $("#" + value.name.replace(/[ ]/g, "") + "-input");
+                            if (Elem == null || value.current == null) {
+                                return;
+                            }
+                            if (value.type == "check") {
+                                if (black_engine_options[index].current == "true") {
+                                    Elem.checked = true;
+                                }
+                                else {
+                                    Elem.checked = false;
+                                }
+                            }
+                            else if (value.type == "spin") {
+                                Elem.value = parseInt(black_engine_options[index].current);
+                            }
+                            else if (value.type == "combo") {
+                                Elem.childNodes.forEach((combooption, comboindex) => {
+                                    if (combooption.innerHTML == black_engine_options[index].current) {
+                                        Elem.selectedIndex = comboindex;
+                                    }
+                                });
+                            }
+                            else {
+                                Elem.value = black_engine_options[index].current;
+                            }
+                        });
+                        console.log(black_engine_options);
+                    }
+                };
+                showcurrent.appendChild(showcurrenttext);
+                popup.appendChild(showcurrent);
+                let reloadoptions = document.createElement("button");
+                let reloadoptionstext = document.createTextNode("Reload Engine Options");
+                reloadoptions.appendChild(reloadoptionstext);
+                reloadoptions.onclick = function () {
+                    changing_engine_settings = false;
+                    if ($("#colorofsettings").innerHTML == "WHITE") {
+                        loading_engine_white = true;
+                        white_engine_datastream = "";
+                        white_engine_options = [];
+                        white_engine_variants = [];
+                        if (white_engine_protocol == "UCI" || white_engine_protocol == "UCI_CYCLONE") {
+                            postMessageToEngine("WHITE", "uci", true);
+                        }
+                        else if (white_engine_protocol == "USI") {
+                            postMessageToEngine("WHITE", "usi", true);
+                        }
+                        else if (white_engine_protocol == "UCCI") {
+                            postMessageToEngine("WHITE", "ucci", true);
+                        }
+                    }
+                    else if ($("#colorofsettings").innerHTML == "BLACK") {
+                        loading_engine_black = true;
+                        black_engine_datastream = "";
+                        black_engine_options = [];
+                        black_engine_variants = [];
+                        if (black_engine_protocol == "UCI" || black_engine_protocol == "UCI_CYCLONE") {
+                            postMessageToEngine("BLACK", "uci", true);
+                        }
+                        else if (black_engine_protocol == "USI") {
+                            postMessageToEngine("BLACK", "usi", true);
+                        }
+                        else if (black_engine_protocol == "UCCI") {
+                            postMessageToEngine("BLACK", "ucci", true);
+                        }
+                    }
+                    while (document.getElementById("enginesettingspopup") != null) {
+                        document.getElementById("enginesettingspopup").remove();
+                    }
+                }
+                popup.appendChild(reloadoptions);
+                let postmsg = document.createElement("button");
+                let postmsgtext = document.createTextNode("Post Message To Engine");
+                postmsg.appendChild(postmsgtext);
+                postmsg.onclick = function () {
+                    let str = prompt("Enter the command that you want to send to the engine.\nBe aware that do not enter any setoption or other commands that changes the settings of the engine, as it will make the values in the GUI differ from engine's settings and can cause problems.");
+                    if (str == null || str == "") {
+                        return;
+                    }
+                    if ($("#colorofsettings").innerHTML == "WHITE") {
+                        postMessageToEngine("WHITE", str, true);
+                    }
+                    else if ($("#colorofsettings").innerHTML == "BLACK") {
+                        postMessageToEngine("BLACK", str, true);
+                    }
+                }
+                popup.appendChild(postmsg);
+                let cancel = document.createElement("button");
+                let canceltext = document.createTextNode("Cancel");
+                cancel.appendChild(canceltext);
+                cancel.onclick = function () {
+                    while (document.getElementById("enginesettingspopup") != null) {
+                        document.getElementById("enginesettingspopup").remove();
+                    }
+                    changing_engine_settings = false;
+                };
+                popup.appendChild(cancel);
+                document.body.appendChild(popup);
+                popup.style.display = "block";
+            }
+
+            const postMessageToEngine = (color, msg, using) => {
+                if (WebSocketStatus == "CONNECTED") {
+                    if (color == "WHITE") {
+                        if (white_engine != "") {
+                            if (using) {
+                                ws.send("POST_MSG|WHITE|" + msg);
+                            }
+                        }
+                    }
+                    else if (color == "BLACK") {
+                        if (black_engine != "") {
+                            if (using) {
+                                ws.send("POST_MSG|BLACK|" + msg);
+                            }
+                        }
+                    }
+                    else {
+                        console.warn("Unknown color: ", color);
+                    }
+                }
+            }
 
             const getVariants = () => {
                 stockfish.postMessage(`uci`);
             };
 
+            const newGameCommand = (color) => {
+                if (typeof color != "string") {
+                    return null;
+                }
+                if (color == "WHITE") {
+                    if (white_engine_protocol == "UCI" || white_engine_protocol == "UCI_CYCLONE") {
+                        return "ucinewgame";
+                    }
+                    else if (white_engine_protocol == "USI") {
+                        return "usinewgame";
+                    }
+                    else if (white_engine_protocol == "UCCI") {
+                        return "uccinewgame";
+                    }
+                }
+                else if (color == "BLACK") {
+                    if (black_engine_protocol == "UCI" || black_engine_protocol == "UCI_CYCLONE") {
+                        return "ucinewgame";
+                    }
+                    else if (black_engine_protocol == "USI") {
+                        return "usinewgame";
+                    }
+                    else if (black_engine_protocol == "UCCI") {
+                        return "uccinewgame";
+                    }
+                }
+                else {
+                    return null;
+                }
+            }
+
+            const setPositionCommand = (color, fen, moves) => {
+                if (typeof color != "string" || typeof fen != "string" || typeof moves != "string") {
+                    return null;
+                }
+                if (color == "WHITE") {
+                    if (fen.length > 0) {
+                        if (white_engine_protocol == "UCI") {
+                            return `position fen ${fen} moves ${moves}`;
+                        }
+                        else if (white_engine_protocol == "USI") {
+                            return `position sfen ${ConvertFENtoSFEN(fen)} moves ${convertUCImovestoUSImoves(moves, 9, 9)}`;
+                        }
+                        else if (white_engine_protocol == "UCCI" || white_engine_protocol == "UCI_CYCLONE") {
+                            return `position fen ${fen} moves ${convertUCImovestoUCCImoves(moves, 9, 10)}`;
+                        }
+                    }
+                    else {
+                        if (white_engine_protocol == "UCI") {
+                            return `position startpos moves ${moves}`;
+                        }
+                        else if (white_engine_protocol == "USI") {
+                            return `position startpos moves ${convertUCImovestoUSImoves(moves, 9, 9)}`;
+                        }
+                        else if (white_engine_protocol == "UCCI" || white_engine_protocol == "UCI_CYCLONE") {
+                            return `position startpos moves ${convertUCImovestoUCCImoves(moves, 9, 10)}`;
+                        }
+                    }
+                }
+                else if (color == "BLACK") {
+                    if (fen.length > 0) {
+                        if (black_engine_protocol == "UCI") {
+                            return `position fen ${fen} moves ${moves}`;
+                        }
+                        else if (black_engine_protocol == "USI") {
+                            return `position sfen ${ConvertFENtoSFEN(fen)} moves ${convertUCImovestoUSImoves(moves, 9, 9)}`;
+                        }
+                        else if (black_engine_protocol == "UCCI" || black_engine_protocol == "UCI_CYCLONE") {
+                            return `position fen ${fen} moves ${convertUCImovestoUCCImoves(moves, 9, 10)}`;
+                        }
+                    }
+                    else {
+                        if (black_engine_protocol == "UCI") {
+                            return `position startpos moves ${moves}`;
+                        }
+                        else if (black_engine_protocol == "USI") {
+                            return `position startpos moves ${convertUCImovestoUSImoves(moves, 9, 9)}`;
+                        }
+                        else if (black_engine_protocol == "UCCI" || black_engine_protocol == "UCI_CYCLONE") {
+                            return `position startpos moves ${convertUCImovestoUCCImoves(moves, 9, 10)}`;
+                        }
+                    }
+                }
+                else {
+                    return null;
+                }
+            }
+
             const setVariant = () => {
                 play_move = false;
-                stop();
+                force_stop();
                 const variant = $("#dropdown-variant").value;
                 stockfish.postMessage(`setoption name UCI_Variant value ${variant}`);
                 stockfish.postMessage(`position startpos`);
+                if (WebSocketStatus == "CONNECTED") {
+                    if (white_engine != "") {
+                        if (white_engine_variants.includes(variant)) {
+                            if (white_engine_has_variants_option) {
+                                if (white_engine_protocol == "UCI" || white_engine_protocol == "UCI_CYCLONE") {
+                                    postMessageToEngine("WHITE", `setoption name UCI_Variant value ${variant}`, true);
+                                }
+                                else if (white_engine_protocol == "USI") {
+                                    postMessageToEngine("WHITE", `setoption name USI_Variant value ${variant}`, true);
+                                }
+                                else if (white_engine_protocol == "UCCI") {
+                                    postMessageToEngine("WHITE", `setoption UCCI_Variant ${variant}`, true);
+                                }
+                            }
+                            postMessageToEngine("WHITE", newGameCommand("WHITE").toString(), true);
+                            using_white_engine = true;
+                            $("#whiteunsupportedvariant").hidden = true;
+                        }
+                        else {
+                            console.log("Engine WHITE: " + white_engine_name + " does not support variant " + variant + ". Fairy Stockfish WASM will be used instead.");
+                            using_white_engine = false;
+                            $("#whiteunsupportedvariant").hidden = false;
+                        }
+                    }
+                    if (black_engine != "") {
+                        if (black_engine_variants.includes(variant)) {
+                            if (black_engine_has_variants_option) {
+                                if (black_engine_protocol == "UCI" || black_engine_protocol == "UCI_CYCLONE") {
+                                    postMessageToEngine("BLACK", `setoption name UCI_Variant value ${variant}`, true);
+                                }
+                                else if (black_engine_protocol == "USI") {
+                                    postMessageToEngine("BLACK", `setoption name USI_Variant value ${variant}`, true);
+                                }
+                                else if (black_engine_protocol == "UCCI") {
+                                    postMessageToEngine("BLACK", `setoption UCCI_Variant ${variant}`, true);
+                                }
+                            }
+                            postMessageToEngine("BLACK", newGameCommand("BLACK").toString(), true);
+                            using_black_engine = true;
+                            $("#blackunsupportedvariant").hidden = true;
+                        }
+                        else {
+                            console.log("Engine BLACK: " + black_engine_name + " does not support variant " + variant + ". Fairy Stockfish WASM will be used instead.");
+                            using_black_engine = false;
+                            $("#blackunsupportedvariant").hidden = false;
+                        }
+                    }
+                }
                 $("#fen").value = "";
                 $("#move").value = "";
                 resetTimer();
             };
 
-            const setFen = () => {
-                stop();
-                const fen = $("#fen").value;
-                const moves = $("#move").value;
+            const setFen = (interrupt_ponder, automatically_start_engine_thinking) => {
+                stop(interrupt_ponder);
+                const fen = $("#fen").value.trim();
+                const moves = $("#move").value.trim();
+                const stm = $("#label-stm").innerText;
 
                 if (fen.length > 0) {
                     stockfish.postMessage(`position fen ${fen} moves ${moves}`);
+                    
                 } else {
                     stockfish.postMessage(`position startpos moves ${moves}`);
+                    /*if (interrupt_ponder || !advanced_time_control || (advanced_time_control && !during_play)) {
+                        postMessageToEngine("WHITE", `position startpos moves ${moves}`, using_white_engine);
+                        postMessageToEngine("BLACK", `position startpos moves ${moves}`, using_black_engine);
+                    }
+                    else {
+                        if (stm == "white") {
+                            if (white_engine_ponder) {
+                                if (white_engine_ponder_move != "0000" && white_engine_ponder_move != $("#move").value.trim().split(' ').at(-1)) {
+                                    white_engine_ponder_miss = true;
+                                    postMessageToEngine("WHITE", `stop\nposition startpos moves ${moves}`, using_white_engine);
+                                    console.log("WHITE ponder miss");
+                                }
+                                else if (white_engine_ponder_move == "0000") {
+                                    postMessageToEngine("WHITE", `position startpos moves ${moves}`, using_white_engine);
+                                }
+                            }
+                            else {
+                                postMessageToEngine("WHITE", `position startpos moves ${moves}`, using_white_engine);
+                            }
+                            if (black_engine_ponder) {
+                                postMessageToEngine("BLACK", `position startpos moves ${moves} ${black_engine_ponder_move}`, using_black_engine);
+                            }
+                            else {
+                                postMessageToEngine("BLACK", `position startpos moves ${moves}`, using_black_engine);
+                            }
+                        }
+                        else if (stm == "black") {
+                            if (black_engine_ponder) {
+                                if (black_engine_ponder_move != "0000" && black_engine_ponder_move != $("#move").value.trim().split(' ').at(-1)) {
+                                    black_engine_ponder_miss = true;
+                                    postMessageToEngine("BLACK", `stop\nposition startpos moves ${moves}`, using_black_engine);
+                                    console.log("BLACK ponder miss");
+                                }
+                                else if (black_engine_ponder_move == "0000") {
+                                    postMessageToEngine("BLACK", `position startpos moves ${moves}`, using_black_engine);
+                                }
+                            }
+                            else {
+                                postMessageToEngine("BLACK", `position startpos moves ${moves}`, using_black_engine);
+                            }
+                            if (white_engine_ponder) {
+                                postMessageToEngine("WHITE", `position startpos moves ${moves} ${white_engine_ponder_move}`, using_white_engine);
+                            }
+                            else {
+                                postMessageToEngine("WHITE", `position startpos moves ${moves}`, using_white_engine);
+                            }
+                        }
+                    }*/
                 }
-                const stm = $("#label-stm").innerText;
-                if (
-                    stm != "undefined" &&
-                    (analysis_mode ||
-                        (play_white && stm == "white") ||
-                        (play_black && stm == "black"))
-                )
+                if (interrupt_ponder || !advanced_time_control || (advanced_time_control && !during_play)) {
+                    postMessageToEngine("WHITE", setPositionCommand("WHITE", fen, moves), using_white_engine);
+                    postMessageToEngine("BLACK", setPositionCommand("BLACK", fen, moves), using_black_engine);
+                }
+                else {
+                    if (stm == "white") {
+                        if (white_engine_ponder) {
+                            if (white_engine_ponder_move != "0000" && white_engine_ponder_move != $("#move").value.trim().split(' ').at(-1)) {
+                                white_engine_ponder_miss = true;
+                                postMessageToEngine("WHITE", `stop\n${setPositionCommand("WHITE", fen, moves) }`, using_white_engine);
+                                console.log("WHITE ponder miss");
+                            }
+                            else if (white_engine_ponder_move == "0000") {
+                                postMessageToEngine("WHITE", setPositionCommand("WHITE", fen, moves), using_white_engine);
+                            }
+                        }
+                        else {
+                            postMessageToEngine("WHITE", setPositionCommand("WHITE", fen, moves), using_white_engine);
+                        }
+                        if (black_engine_ponder) {
+                            postMessageToEngine("BLACK", setPositionCommand("BLACK", fen, `${moves} ${black_engine_ponder_move}`), using_black_engine);
+                        }
+                        else {
+                            postMessageToEngine("BLACK", setPositionCommand("BLACK", fen, moves), using_black_engine);
+                        }
+                    }
+                    else if (stm == "black") {
+                        if (black_engine_ponder) {
+                            if (black_engine_ponder_move != "0000" && black_engine_ponder_move != $("#move").value.trim().split(' ').at(-1)) {
+                                black_engine_ponder_miss = true;
+                                postMessageToEngine("BLACK", `stop\n${setPositionCommand("BLACK", fen, moves) }`, using_black_engine);
+                                console.log("BLACK ponder miss");
+                            }
+                            else if (black_engine_ponder_move == "0000") {
+                                postMessageToEngine("BLACK", setPositionCommand("BLACK", fen, moves), using_black_engine);
+                            }
+                        }
+                        else {
+                            postMessageToEngine("BLACK", setPositionCommand("BLACK", fen, moves), using_black_engine);
+                        }
+                        if (white_engine_ponder) {
+                            postMessageToEngine("WHITE", setPositionCommand("WHITE", fen, `${moves} ${white_engine_ponder_move}`), using_white_engine);
+                        }
+                        else {
+                            postMessageToEngine("WHITE", setPositionCommand("WHITE", fen, moves), using_white_engine);
+                        }
+                    }
+                }
+                
+                if (automatically_start_engine_thinking && stm != "undefined" && ((play_white && stm == "white") || (play_black && stm == "black"))) {
                     setTimeout(go(), 10);
+                }
             };
 
             const totalMoveNumber = () => {
@@ -874,14 +2601,16 @@
                 $("#displayready").value = 2;  //2 = displayMove() working
                 let i = 0;
                 let j = 0;
-                moves_split = $("#move").value.split(' ');
+                moves_split = $("#move").value.trim().split(' ');
                 if (movenum == -1) {
                     if (is_force_stop) {
                         force_stop();
                     } else {
-                        stop();
+                        stop(true);
                     }
-                    $("#displaymoves").value = $("#move").value;
+                    //postMessageToEngine("WHITE", "ucinewgame", using_white_engine);
+                    //postMessageToEngine("BLACK", "ucinewgame", using_black_engine);
+                    $("#displaymoves").value = $("#move").value.trim();
                     review_mode = false;
                     $("#isreviewmode").value = 0;
                 } else if (movenum > totalMoveNumber() || movenum < -1) {
@@ -891,8 +2620,10 @@
                     if (is_force_stop) {
                         force_stop();
                     } else {
-                        stop();
+                        stop(true);
                     }
+                    //postMessageToEngine("WHITE", "ucinewgame", using_white_engine);
+                    //postMessageToEngine("BLACK", "ucinewgame", using_black_engine);
                     review_mode = true;
                     $("#isreviewmode").value = 1;
                     $("#displaymoves").value = "";
@@ -907,13 +2638,17 @@
                         }
                     }
                 }
-                const fen = $("#fen").value;
-                const display_moves = $("#displaymoves").value;
+                const fen = $("#fen").value.trim();
+                const display_moves = $("#displaymoves").value.trim();
                 if (fen.length > 0) {
                     stockfish.postMessage(`position fen ${fen} moves ${display_moves}`);
                 } else {
                     stockfish.postMessage(`position startpos moves ${display_moves}`);
+                    //postMessageToEngine("WHITE", `position startpos moves ${display_moves}`, using_white_engine);
+                    //postMessageToEngine("BLACK", `position startpos moves ${display_moves}`, using_black_engine);
                 }
+                postMessageToEngine("WHITE", setPositionCommand("WHITE", fen, display_moves), using_white_engine);
+                postMessageToEngine("BLACK", setPositionCommand("BLACK", fen, display_moves), using_black_engine);
                 console.log(`${display_moves}`);
                 $("#displayready").value = 1;  //1 = updateChessBoardToPosition() working
             };
@@ -988,8 +2723,12 @@
                 board_setup_mode = false;
                 $("#fen").value = "";
                 $("#move").value = "";
+                white_engine_datastream = "";
+                black_engine_datastream = "";
                 resetTimer();
-                setFen();
+                postMessageToEngine("WHITE", `stop\n${newGameCommand("WHITE")}`, using_white_engine);
+                postMessageToEngine("BLACK", `stop\n${newGameCommand("BLACK")}`, using_black_engine);
+                setFen(true, false);
                 $("#currentposition").click();
             };
 
@@ -999,38 +2738,55 @@
                 }
                 const moves = $("#move").value;
                 $("#move").value = moves.substring(0, moves.lastIndexOf(" "));
+                postMessageToEngine("WHITE", "stop", using_white_engine);
+                postMessageToEngine("BLACK", "stop", using_black_engine);
                 resetTimer();
-                setFen();
+                setFen(true, false);
             };
 
             const go = () => {
-                if (board_setup_mode) {
+                if (board_setup_mode || (advanced_time_control && !during_play)) {
                     return;
                 }
                 return_early = play_move;
-                stop();
                 console.log(`return early: ${return_early}`);
                 if (return_early) return; // avoid race condition
+                stop(false);
+                console.log("white ponder: ", white_engine_ponder, " ", white_engine_ponder_move);
+                console.log("black ponder: ", black_engine_ponder, " ", black_engine_ponder_move);
                 let args = "";
+                let wargs = "";
+                let bargs = "";
                 const movetime = $("#movetime").value;
                 const depth = $("#depth").value;
+                const nodes = $("#nodes").value;
                 const threadnum = $("#threads").value;
                 const hashsize = $("#hash").value;
-                const multiplepondervalue = $("#multipv").value;
+                const multipleprincipalvariation = $("#multipv").value;
+                const whitedepth = $("#whitedepth").value;
+                const whitemovetime = $("#whitemovetime").value;
+                const whitenodes = $("#whitenodes").value;
+                const blackdepth = $("#blackdepth").value;
+                const blackmovetime = $("#blackmovetime").value;
+                const blacknodes = $("#blacknodes").value;
                 let wtime = 0;
                 let btime = 0;
                 let winc = 0;
                 let binc = 0;
-                if (!advanced_time_control && !analysis_mode && movetime.length > 0 && movetime > 0) {
-                    args += `movetime ${movetime}`;
+                if (analysis_mode) {
+                    args += " infinite";
+                    wargs += " infinite";
+                    bargs += " infinite";
                 }
                 else if (advanced_time_control) {
                     if (white_timer_type == "infinite" && $("#label-stm").innerHTML == "white") {
                         args += "infinite";
+                        wargs += "infinite";
                         console.log("wtime infinite");
                     }
                     else if (black_timer_type == "infinite" && $("#label-stm").innerHTML == "black") {
                         args += "infinite";
+                        bargs += "infinite";
                         console.log("btime infinite");
                     }
                     else {
@@ -1045,6 +2801,9 @@
                         else if (white_timer_type == "hourglass") {  //How to tell that it's hourglass to engine?
                             wtime += (+white_remaining_time);
                         }
+                        else if (white_timer_type == "byoyomi") {
+                            wtime += (+white_remaining_time);
+                        }
                         if (black_timer_type == "time per move") {
                             btime += (+black_moving_time_list[0]);
                             binc += (+black_moving_time_list[0]);
@@ -1056,14 +2815,56 @@
                         else if (black_timer_type == "hourglass") {  //How to tell that it's hourglass to engine?
                             btime += (+black_remaining_time);
                         }
+                        else if (black_timer_type == "byoyomi") {
+                            btime += (+black_remaining_time);
+                        }
                         console.log(`wtime ${wtime} winc ${winc} btime ${btime} binc ${binc}`);
-                        args += `wtime ${wtime} winc ${winc} btime ${btime} binc ${binc}`;
+                        args += ` wtime ${wtime} winc ${winc} btime ${btime} binc ${binc}`;
+                        if (white_engine_protocol == "UCCI") {
+                            wargs += ` time ${wtime} increment ${winc} opptime ${btime} oppincrement ${binc}`;
+                        }
+                        else {
+                            wargs += ` wtime ${wtime} winc ${winc} btime ${btime} binc ${binc}`;
+                        }
+                        if (black_engine_protocol == "UCCI") {
+                            bargs += ` time ${btime} increment ${binc} opptime ${wtime} oppincrement ${winc}`;
+                        }
+                        else {
+                            bargs += ` wtime ${wtime} winc ${winc} btime ${btime} binc ${binc}`;
+                        }
                         stockfish.postMessage(`setoption name Move Overhead value ${timer_interval}`);
                     }
                 }
-                if (!analysis_mode && depth.length > 0 && depth > 0) {
-                    args += ` depth ${depth}`;
+                else {
+                    if (!analysis_mode && $("#depth").validity.valid && depth.length > 0) {
+                        args += ` depth ${depth}`;
+                    }
+                    if (!analysis_mode && $("#movetime").validity.valid && movetime.length > 0) {
+                        args += ` movetime ${movetime}`;
+                    }
+                    if (!analysis_mode && $("#nodes").validity.valid && nodes.length > 0) {
+                        args += ` nodes ${nodes}`;
+                    }
+                    if ($("#whitedepth").validity.valid && whitedepth.length > 0) {
+                        wargs += ` depth ${whitedepth}`;
+                    }
+                    if ($("#whitemovetime").validity.valid && whitemovetime.length > 0) {
+                        wargs += ` movetime ${whitemovetime}`;
+                    }
+                    if ($("#whitenodes").validity.valid && whitenodes.length > 0) {
+                        wargs += ` nodes ${whitenodes}`;
+                    }
+                    if ($("#blackdepth").validity.valid && blackdepth.length > 0) {
+                        bargs += ` depth ${blackdepth}`;
+                    }
+                    if ($("#blackmovetime").validity.valid && blackmovetime.length > 0) {
+                        bargs += ` movetime ${blackmovetime}`;
+                    }
+                    if ($("#blacknodes").validity.valid && blacknodes.length > 0) {
+                        bargs += ` nodes ${blacknodes}`;
+                    }
                 }
+                console.log("args:", args, "\nwargs:", wargs, "\nbargs:", bargs);
 
                 if (threadnum.length <= 0 || threadnum < 1) {
                     stockfish.postMessage(`setoption name Threads value 1`);
@@ -1074,7 +2875,7 @@
                 else {
                     stockfish.postMessage(`setoption name Threads value ${threadnum}`);
                 }
-                stockfish.postMessage(`setoption name clear hash`);
+                //stockfish.postMessage(`setoption name clear hash`);
                 if (hashsize.length <= 0 || hashsize < 1) {
                     stockfish.postMessage(`setoption name Hash value 16`);
                 }
@@ -1084,50 +2885,106 @@
                 else {
                     stockfish.postMessage(`setoption name Hash value ${hashsize}`);
                 }
-                if (multiplepondervalue.length <= 0 || multiplepondervalue < 1) {
+                if (multipleprincipalvariation.length <= 0 || multipleprincipalvariation < 1) {
                     stockfish.postMessage(`setoption name MultiPV value 1`);
                 }
-                else if (multiplepondervalue > 500) {
+                else if (multipleprincipalvariation > 500) {
                     stockfish.postMessage(`setoption name Hash value 500`);
                 }
                 else {
-                    stockfish.postMessage(`setoption name MultiPV value ${multiplepondervalue}`);
+                    stockfish.postMessage(`setoption name MultiPV value ${multipleprincipalvariation}`);
                 }
-                stockfish.postMessage(`isready`);
 
                 const stm = $("#label-stm").innerText;
-                play_move =
-                    (play_white && stm == "white") || (play_black && stm == "black");
-                stockfish.postMessage(`go ${args}`);
+                play_move = (play_white && stm == "white") || (play_black && stm == "black");
+                if (stm == "white" && WebSocketStatus == "CONNECTED") {
+                    if (white_engine != "" && using_white_engine) {
+                        if (advanced_time_control && white_engine_ponder && white_engine_ponder_move == $("#move").value.trim().split(' ').at(-1)) {
+                            postMessageToEngine("WHITE", "ponderhit", true);
+                            console.log("WHITE ponder hit");
+                        }
+                        else {
+                            postMessageToEngine("WHITE", `go${wargs}`, true);
+                            console.log("WHITE: go " + wargs);
+                        }
+                    }
+                    else {
+                        stockfish.postMessage(`go${args}`);
+                    }
+                    if (advanced_time_control && white_timer_type != "infinite" && black_engine_ponder && black_engine_ponder_move != "0000") {
+                        postMessageToEngine("BLACK", `go ponder${bargs}`, using_black_engine);
+                    }
+                }
+                else if (stm == "black" && WebSocketStatus == "CONNECTED") {
+                    if (black_engine != "" && using_black_engine) {
+                        if (advanced_time_control && black_engine_ponder && black_engine_ponder_move == $("#move").value.trim().split(' ').at(-1)) {
+                            postMessageToEngine("BLACK", "ponderhit", true);
+                            console.log("BLACK ponder hit");
+                        }
+                        else {
+                            postMessageToEngine("BLACK", `go${bargs}`, true);
+                            console.log("BLACK: go " + bargs);
+                        }
+                    }
+                    else {
+                        stockfish.postMessage(`go${args}`);
+                    }
+                    if (advanced_time_control && black_timer_type != "infinite" && white_engine_ponder && white_engine_ponder_move != "0000") {
+                        postMessageToEngine("WHITE", `go ponder${wargs}`, using_white_engine);
+                    }
+                }
+                else {
+                    stockfish.postMessage(`go${args}`);
+                }
                 output2 = "";
+                $("#output2").innerText = output2;
+                scrollOutput();
             };
 
             const setupTimer = () => {
                 $("#timeoutside").value = 0;
                 white_timer_type = $("#dropdown-whitetimemode").value;
                 black_timer_type = $("#dropdown-blacktimemode").value;
-                white_remaining_time = $("#whitestarttime").value;
-                black_remaining_time = $("#blackstarttime").value;
-                if (white_remaining_time.length < 1 || white_remaining_time < 1) {
+                white_remaining_time = parseInt($("#whitestarttime").value);
+                black_remaining_time = parseInt($("#blackstarttime").value);
+                if (isNaN(white_remaining_time) || white_remaining_time.length < 1 || white_remaining_time < 1) {
                     white_remaining_time = 600000;
                 }
-                if (black_remaining_time.length < 1 || black_remaining_time < 1) {
+                if (isNaN(black_remaining_time) || black_remaining_time.length < 1 || black_remaining_time < 1) {
                     black_remaining_time = 600000;
                 }
-                white_time_gain = $("#whitetimegain").value;
-                black_time_gain = $("#blacktimegain").value;
-                if (white_time_gain.length < 1 || white_time_gain < 0) {
+                white_time_gain = parseInt($("#whitetimegain").value);
+                black_time_gain = parseInt($("#blacktimegain").value);
+                if (isNaN(white_time_gain) || white_time_gain.length < 1 || white_time_gain < 0) {
                     white_time_gain = 0;
                 }
-                if (black_time_gain.length < 1 || black_time_gain < 0) {
+                if (isNaN(black_time_gain) || black_time_gain.length < 1 || black_time_gain < 0) {
                     black_time_gain = 0;
                 }
-                white_time_margin = $("#whitetimemargin").value;
-                black_time_margin = $("#blacktimemargin").value;
-                if (white_time_margin.length < 1 || white_time_margin < 0) {
+                white_byoyomi_time_per_period = parseInt($("#whitebyoyomitime").value);
+                black_byoyomi_time_per_period = parseInt($("#blackbyoyomitime").value);
+                if (isNaN(white_byoyomi_time_per_period) || white_byoyomi_time_per_period.length < 1 || white_byoyomi_time_per_period < 1) {
+                    white_byoyomi_time_per_period = 30000;
+                }
+                if (isNaN(black_byoyomi_time_per_period) || black_byoyomi_time_per_period.length < 1 || black_byoyomi_time_per_period < 1) {
+                    black_byoyomi_time_per_period = 30000;
+                }
+                white_byoyomi_period_count = parseInt($("#whitebyoyomiperiodcount").value);
+                black_byoyomi_period_count = parseInt($("#blackbyoyomiperiodcount").value);
+                if (isNaN(white_byoyomi_period_count) || white_byoyomi_period_count.length < 1 || white_byoyomi_period_count < 1) {
+                    white_byoyomi_period_count = 1;
+                }
+                if (isNaN(black_byoyomi_period_count) || black_byoyomi_period_count.length < 1 || black_byoyomi_period_count < 1) {
+                    black_byoyomi_period_count = 1;
+                }
+                white_remaining_byoyomi_periods = white_byoyomi_period_count;
+                black_remaining_byoyomi_periods = black_byoyomi_period_count;
+                white_time_margin = parseInt($("#whitetimemargin").value);
+                black_time_margin = parseInt($("#blacktimemargin").value);
+                if (isNaN(white_time_margin) || white_time_margin.length < 1 || white_time_margin < 0) {
                     white_time_margin = 0;
                 }
-                if (black_time_margin.length < 1 || black_time_margin < 0) {
+                if (isNaN(black_time_margin) || black_time_margin.length < 1 || black_time_margin < 0) {
                     black_time_margin = 0;
                 }
                 white_moving_time_list = [];
@@ -1178,6 +3035,14 @@
                         else if (white_timer_type == "time per move") {
                             white_remaining_time = (+white_moving_time_list[0]) + (+timer_interval);
                         }
+                        else if (white_timer_type == "byoyomi") {
+                            if (white_remaining_byoyomi_periods < white_byoyomi_period_count) {
+                                white_remaining_time = (+white_byoyomi_time_per_period) + (+timer_interval);
+                            }
+                            else {
+                                white_remaining_time = (+white_remaining_time) + (+timer_interval);
+                            }
+                        }
                         if (black_timer_type == "hourglass") {
                             white_remaining_time = (+white_remaining_time) + (+black_moving_time_list.at(-2)) - (+black_moving_time_list.at(-1)) + (+timer_interval);
                         }
@@ -1188,6 +3053,16 @@
                         return;
                     }
                     white_remaining_time = white_remaining_time - timer_interval;
+                    if (white_timer_type == "byoyomi" && white_remaining_time <= 0) {
+                        if (white_remaining_byoyomi_periods == 0) {
+                            ;
+                        }
+                        else {
+                            white_remaining_byoyomi_periods--;
+                            white_remaining_time = (+white_byoyomi_time_per_period);
+                            console.log("WHITE byoyomi remaining periods: " + white_remaining_byoyomi_periods);
+                        }
+                    }
                     if (white_remaining_time < -white_time_margin) {
                         deleteTimer();
                         $("#timeoutside").value = 1;
@@ -1232,6 +3107,14 @@
                         else if (black_timer_type == "time per move") {
                             black_remaining_time = (+black_moving_time_list[0]) + (+timer_interval);
                         }
+                        else if (black_timer_type == "byoyomi") {
+                            if (black_remaining_byoyomi_periods < black_byoyomi_period_count) {
+                                black_remaining_time = (+black_byoyomi_time_per_period) + (+timer_interval);
+                            }
+                            else {
+                                black_remaining_time = (+black_remaining_time) + (+timer_interval);
+                            }
+                        }
                         if (white_timer_type == "hourglass") {
                             black_remaining_time = (+black_remaining_time) + (+white_moving_time_list.at(-2)) - (+white_moving_time_list.at(-1)) + (+timer_interval);
                         }
@@ -1242,6 +3125,16 @@
                         return;
                     }
                     black_remaining_time = black_remaining_time - timer_interval;
+                    if (black_timer_type == "byoyomi" && black_remaining_time <= 0) {
+                        if (black_remaining_byoyomi_periods == 0) {
+                            ;
+                        }
+                        else {
+                            black_remaining_byoyomi_periods--;
+                            black_remaining_time = (+black_byoyomi_time_per_period);
+                            console.log("BLACK byoyomi remaining periods: " + black_remaining_byoyomi_periods);
+                        }
+                    }
                     if (black_remaining_time < -black_time_margin) {
                         deleteTimer();
                         $("#timeoutside").value = 2;
@@ -1328,6 +3221,10 @@
                 $("#gamestatus").click();
                 during_play = true;
                 $("#currentposition").click();
+                white_engine_ponder_move = "0000";
+                black_engine_ponder_move = "0000";
+                white_engine_ponder_miss = false;
+                black_engine_ponder_miss = false;
                 createTimer();
                 const stm = $("#label-stm").innerText;
                 console.log(`white: ${play_white} black: ${play_black} move: ${(play_white && stm == "white") || (play_black && stm == "black")}`);
@@ -1337,13 +3234,34 @@
                 }
             }
 
-            const stop = () => {
+            const stop = (interrupt_pondering) => {
                 stockfish.postMessage(`stop`);
+                if (interrupt_pondering || !advanced_time_control) {
+                    white_engine_ponder_move = "0000";
+                    black_engine_ponder_move = "0000";
+                    white_engine_ponder_miss = false;
+                    black_engine_ponder_miss = false;
+                    postMessageToEngine("WHITE", "stop", using_white_engine);
+                    postMessageToEngine("BLACK", "stop", using_black_engine);
+                }
+                else {
+                    if (!white_engine_ponder) {
+                        postMessageToEngine("WHITE", "stop", using_white_engine);
+                        white_engine_ponder_miss = false;
+                    }
+                    if (!black_engine_ponder) {
+                        postMessageToEngine("BLACK", "stop", using_white_engine);
+                        black_engine_ponder_miss = false;
+                    }
+                }
             };
 
             const force_stop = () => {
                 play_white = play_black = false;
-                stop();
+                play_move = false;
+                white_engine_datastream = "";
+                black_engine_datastream = "";
+                stop(true);
             };
 
             const changePieces = (onlyChangeWhenInvalid) => {
@@ -1435,8 +3353,8 @@
             };
 
             const scrollOutput = () => {
-                $("#output2").scrollTo({
-                    top: $("#output2").scrollHeight,
+                $("#output2-div").scrollTo({
+                    top: $("#output2-div").scrollHeight,
                     behavior: "smooth",
                 });
             };
@@ -1500,6 +3418,8 @@
                                     $("#set").click();
                                 }
                                 output2 += line + "\n";
+                                $("#output2").innerText = output2;
+                                scrollOutput();
                             }
                             m.redraw();
                         });
@@ -1560,11 +3480,25 @@
                     m("p#pagetitle", "Advanced"),
                     m("div#misc", [
                         m("div", [
-                            `Fairy-Stockfish: ${stockfish_state} - download: `,
+                            `Fairy-Stockfish WASM: ${stockfish_state} - download: `,
                             m(RequestProgress, {
                                 url: "./lib/stockfish.wasm",
                                 onFinishDownload,
                             }),
+                        ]),
+                        m("div", [
+                            `WebSocket Server Backend Connection Status: ${WebSocketStatus} `,
+                            m(
+                                "span",
+                                {
+                                    style: "cursor: pointer;",
+                                    onclick: () =>
+                                        window.alert(
+                                            "Due to browser security restrictions, binary executables can be only executed on server side by using a backend. FairyGround uses Node.js as the backend."
+                                        ),
+                                },
+                                "[?]"
+                            ),
                         ]),
                         m("div", { hidden: during_play }, [
                             "- nnue file: ",
@@ -1598,7 +3532,7 @@
                                     style: "cursor: pointer;",
                                     onclick: () =>
                                         window.alert(
-                                            "You can upload a Fairy-Stockfish compatible variants.ini file. See here for details: https://github.com/ianfab/Fairy-Stockfish/wiki/Variant-configuration."
+                                            "You can upload a Fairy-Stockfish compatible variants.ini file. See here for details: https://github.com/ianfab/Fairy-Stockfish/wiki/Variant-configuration. Uploading variants file here will not change the settings of binary engines you loaded."
                                         ),
                                 },
                                 "[?]"
@@ -1645,7 +3579,7 @@
                                     e.redraw = false;
                                     return;
                                 }
-                                setFen();
+                                setFen(true, false);
                             },
                         }),
                         m("input#move", {
@@ -1656,7 +3590,7 @@
                                     e.redraw = false;
                                     return;
                                 }
-                                setFen();
+                                setFen(true, false);
                             },
                         }),
                         m(
@@ -1668,7 +3602,13 @@
                                         return;
                                     }
                                     resetTimer();
-                                    window.setTimeout(setFen, 10);
+                                    postMessageToEngine("WHITE", newGameCommand("WHITE"), using_white_engine);
+                                    postMessageToEngine("BLACK", newGameCommand("BLACK"), using_black_engine);
+                                    white_engine_datastream = "";
+                                    black_engine_datastream = "";
+                                    window.setTimeout(() => {
+                                        setFen(true, false);
+                                    }, 10);
                                     $("#currentposition").click();
                                 },
                             },
@@ -1693,6 +3633,10 @@
                             "select#dropdown-posvariantname",
                             {
                                 disabled: !is_ready || review_mode,
+                                onchange: () => {
+                                    postMessageToEngine("WHITE", newGameCommand("WHITE"), using_white_engine);
+                                    postMessageToEngine("BLACK", newGameCommand("BLACK"), using_black_engine);
+                                },
                             },
                             []
                         ),
@@ -1700,42 +3644,283 @@
                             disabled: !is_ready || review_mode,
                         }, "About this position"),
                     ]),
+                    m("div#enginesettings", { hidden: during_play }, [
+                        m("p", "Load binary engines: (White refers to first mover and black refers to second mover)"),
+                        m("p", "If there are spaces in the path, please add quotes to enclose the path.(e.g. \"D:\\e n g i n e.exe\")"),
+                        m("div#whiteengine", [
+                            m("input#whiteenginepath", {
+                                placeholder: "White engine path on server (e.g. D:\\engine.exe)",
+                                disabled: !is_ready || review_mode || board_setup_mode || WebSocketStatus != "CONNECTED",
+                            }),
+                            m("select#whiteengineprotocol", {
+                                disabled: !is_ready || review_mode,
+                            },
+                                [
+                                    m("option", { value: "UCI" }, "UCI"),
+                                    m("option", { value: "USI" }, "USI"),
+                                    m("option", { value: "UCCI" }, "UCCI"),
+                                    m("option", { value: "UCI_CYCLONE" }, "UCI-Cyclone"),
+                                ]),
+                            m("button#whiteenginesettings", {
+                                disabled: !is_ready,
+                                onclick: () => {
+                                    if (board_setup_mode) {
+                                        return;
+                                    }
+                                    if (WebSocketStatus == "CLOSED") {
+                                        window.alert("You are disconnected from the WebSocket server. Loading binary engines are not available unless you reload the page.");
+                                        return;
+                                    }
+                                    if (WebSocketStatus == "ERROR" || ws == null) {
+                                        window.alert("Cannot establish connection to the WebSocket Server. If you are running locally, check whether the server is running properly and the port is accessible. If you are running WebSocket Server on the remote server, ask the server administrators about it.");
+                                        return;
+                                    }
+                                    if (white_engine == "") {
+                                        window.alert("Engine is not loaded.");
+                                        return;
+                                    }
+                                    changing_engine_settings = true;
+                                    EditEngineSettings("WHITE", ws);
+                                },
+                            }, "Engine Settings"),
+                            m("button#whitesupportedvariants", {
+                                disabled: !is_ready,
+                                onclick: () => {
+                                    if (board_setup_mode) {
+                                        return;
+                                    }
+                                    if (WebSocketStatus == "CLOSED") {
+                                        window.alert("You are disconnected from the WebSocket server. Loading binary engines are not available unless you reload the page.");
+                                        return;
+                                    }
+                                    if (WebSocketStatus == "ERROR" || ws == null) {
+                                        window.alert("Cannot establish connection to the WebSocket Server. If you are running locally, check whether the server is running properly and the port is accessible. If you are running WebSocket Server on the remote server, ask the server administrators about it.");
+                                        return;
+                                    }
+                                    if (white_engine == "") {
+                                        window.alert("Engine is not loaded.");
+                                        return;
+                                    }
+                                    window.alert(white_engine_name + "\n\nSupport Variants:\n" + white_engine_variants);
+                                },
+                            }, "Supported Variants"),
+                            m("input[type=number]#whitedepth", {
+                                placeholder: "Depth",
+                                disabled: !is_ready || WebSocketStatus != "CONNECTED" || analysis_mode,
+                                min: 1,
+                            }),
+                            m("input[type=number]#whitemovetime", {
+                                placeholder: "Movetime",
+                                disabled: !is_ready || WebSocketStatus != "CONNECTED" || analysis_mode,
+                                min: 0,
+                            }),
+                            m("input[type=number]#whitenodes", {
+                                placeholder: "Nodes",
+                                disabled: !is_ready || WebSocketStatus != "CONNECTED" || analysis_mode,
+                                min: 1,
+                            }),
+                            m("p#whiteunsupportedvariant", { hidden: true }, "This engine does not support this variant. Fairy Stockfish WASM will be used instead."),
+                        ]),
+                        m("div#blackengine", [
+                            m("input#blackenginepath", {
+                                placeholder: "Black engine path on server (e.g. D:\\engine.exe)",
+                                disabled: !is_ready || review_mode || board_setup_mode || WebSocketStatus != "CONNECTED",
+                            }),
+                            m("select#blackengineprotocol", {
+                                disabled: !is_ready || review_mode,
+                            },
+                                [
+                                    m("option", { value: "UCI" }, "UCI"),
+                                    m("option", { value: "USI" }, "USI"),
+                                    m("option", { value: "UCCI" }, "UCCI"),
+                                    m("option", { value: "UCI_CYCLONE" }, "UCI-Cyclone"),
+                                ]),
+                            m("button#blackenginesettings", {
+                                disabled: !is_ready,
+                                onclick: () => {
+                                    if (board_setup_mode) {
+                                        return;
+                                    }
+                                    if (WebSocketStatus == "CLOSED") {
+                                        window.alert("You are disconnected from the WebSocket server. Loading binary engines are not available unless you reload the page.");
+                                        return;
+                                    }
+                                    if (WebSocketStatus == "ERROR" || ws == null) {
+                                        window.alert("Cannot establish connection to the WebSocket Server. If you are running locally, check whether the server is running properly and the port is accessible. If you are running WebSocket Server on the remote server, ask the server administrators about it.");
+                                        return;
+                                    }
+                                    if (black_engine == "") {
+                                        window.alert("Engine is not loaded.");
+                                        return;
+                                    }
+                                    changing_engine_settings = true;
+                                    EditEngineSettings("BLACK", ws);
+                                },
+                            }, "Engine Settings"),
+                            m("button#blacksupportedvariants", {
+                                disabled: !is_ready,
+                                onclick: () => {
+                                    if (board_setup_mode) {
+                                        return;
+                                    }
+                                    if (WebSocketStatus == "CLOSED") {
+                                        window.alert("You are disconnected from the WebSocket server. Loading binary engines are not available unless you reload the page.");
+                                        return;
+                                    }
+                                    if (WebSocketStatus == "ERROR" || ws == null) {
+                                        window.alert("Cannot establish connection to the WebSocket Server. If you are running locally, check whether the server is running properly and the port is accessible. If you are running WebSocket Server on the remote server, ask the server administrators about it.");
+                                        return;
+                                    }
+                                    if (black_engine == "") {
+                                        window.alert("Engine is not loaded.");
+                                        return;
+                                    }
+                                    window.alert(black_engine_name + "\n\nSupport Variants:\n" + black_engine_variants);
+                                },
+                            }, "Supported Variants"),
+                            m("input[type=number]#blackdepth", {
+                                placeholder: "Depth",
+                                disabled: !is_ready || WebSocketStatus != "CONNECTED" || analysis_mode,
+                                min: 1,
+                            }),
+                            m("input[type=number]#blackmovetime", {
+                                placeholder: "Movetime",
+                                disabled: !is_ready || WebSocketStatus != "CONNECTED" || analysis_mode,
+                                min: 0,
+                            }),
+                            m("input[type=number]#blacknodes", {
+                                placeholder: "Nodes",
+                                disabled: !is_ready || WebSocketStatus != "CONNECTED" || analysis_mode,
+                                min: 1,
+                            }),
+                            m("p#blackunsupportedvariant", { hidden: true }, "This engine does not support this variant. Fairy Stockfish WASM will be used instead."),
+                        ]),
+                        m("div#enginecontrol", [
+                            m(
+                                "button#loadengines",
+                                {
+                                    disabled: !is_ready || review_mode,
+                                    onclick: () => {
+                                        if (board_setup_mode) {
+                                            return;
+                                        }
+                                        if (loading_engine_white || loading_engine_black) {
+                                            console.warn("Loading engine.");
+                                            return;
+                                        }
+                                        if (WebSocketStatus == "CLOSED") {
+                                            window.alert("You are disconnected from the WebSocket server. Loading binary engines are not available unless you reload the page.");
+                                            return;
+                                        }
+                                        if (WebSocketStatus == "ERROR" || ws == null) {
+                                            window.alert("Cannot establish connection to the WebSocket Server. If you are running locally, check whether the server is running properly and the port is accessible. If you are running WebSocket Server on the remote server, ask the server administrators about it.");
+                                            return;
+                                        }
+                                        //$("#reset").click();
+                                        if ($("#whiteenginepath").value != "") {
+                                            loading_engine_white = true;
+                                            white_engine_protocol = $("#whiteengineprotocol").value;
+                                            white_engine_options = [];
+                                            white_engine_datastream = "";
+                                            white_engine_variants = [];
+                                            white_engine_ponder = false;
+                                            white_engine_ponder_miss = false;
+                                        }
+                                        else {
+                                            white_engine = "";
+                                            console.log("White engine has been set to Fairy Stockfish WASM");
+                                        }
+                                        if ($("#blackenginepath").value != "") {
+                                            loading_engine_black = true;
+                                            black_engine_protocol = $("#blackengineprotocol").value;
+                                            black_engine_options = [];
+                                            black_engine_datastream = "";
+                                            black_engine_variants = [];
+                                            black_engine_ponder = false;
+                                            black_engine_ponder_miss = false;
+                                        }
+                                        else {
+                                            black_engine = "";
+                                            console.log("Black engine has been set to Fairy Stockfish WASM");
+                                        }
+                                        ws.send("LOAD_ENGINE|" + $("#whiteenginepath").value + "|" + $("#blackenginepath").value + "|" + $("#whiteengineprotocol").value + "|" + $("#blackengineprotocol").value);
+                                        setTimeout(() => {
+                                            if (loading_engine_white) {
+                                                white_engine = "";
+                                                console.error("Load engine timed out for white.");
+                                                window.alert("Load engine timed out for white.");
+                                                loading_engine_white = false;
+                                                white_engine = "";
+                                                white_engine_variants = [];
+                                            }
+                                            if (loading_engine_black) {
+                                                black_engine = "";
+                                                console.error("Load engine timed out for black.");
+                                                window.alert("Load engine timed out for black.");
+                                                loading_engine_black = false;
+                                                black_engine = "";
+                                                black_engine_variants = [];
+                                            }
+                                        }, load_engine_timeout);
+                                    },
+                                },
+                                "Load"
+                            ),
+                        ]),
+                    ]),
+                    m("div#ffishsettings-outdiv", { hidden: during_play }, [
+                        m("div#ffishsettings", { hidden: during_play }, [
+                            m("p", "Fairy Stockfish WASM settings: "),
+                            m("input[type=number]#depth", {
+                                placeholder: "Depth",
+                                disabled: !is_ready || analysis_mode,
+                                min: 1,
+                                max: 255,
+                            }),
+                            m("input[type=number]#movetime", {
+                                placeholder: "Movetime",
+                                disabled: !is_ready || analysis_mode,
+                                min: 0,
+                            }),
+                            m("input[type=number]#nodes", {
+                                placeholder: "Nodes",
+                                disabled: !is_ready || analysis_mode,
+                                min: 1,
+                            }),
+                            m("input[type=number]#threads", {
+                                placeholder: "Threads",
+                                disabled: !is_ready,
+                                min: 1,
+                                max: 512,
+                            }),
+                            m("input[type=number]#hash", {
+                                placeholder: "Hash",
+                                disabled: !is_ready,
+                                min: 1,
+                                max: 33554432,
+                            }),
+                            m("input[type=number]#multipv", {
+                                placeholder: "MultiPV",
+                                disabled: !is_ready,
+                                min: 1,
+                                max: 500,
+                            }),
+                        ]),
+                    ]),
                     m("div#input2", { hidden: during_play }, [
-                        m("input[type=number]#depth", {
-                            placeholder: "Depth",
-                            disabled: !is_ready || analysis_mode,
-                            min: 1,
-                            max: 255,
-                        }),
-                        m("input[type=number]#movetime", {
-                            placeholder: "Movetime",
-                            disabled: !is_ready || analysis_mode,
-                            min: 0,
-                        }),
-                        m("input[type=number]#threads", {
-                            placeholder: "Threads",
-                            disabled: !is_ready,
-                            min: 1,
-                            max: 512,
-                        }),
-                        m("input[type=number]#hash", {
-                            placeholder: "Hash",
-                            disabled: !is_ready,
-                            min: 1,
-                            max: 33554432,
-                        }),
-                        m("input[type=number]#multipv", {
-                            placeholder: "MultiPV",
-                            disabled: !is_ready,
-                            min: 1,
-                            max: 500,
-                        }),
                         m("button#go", {
                             disabled: !is_ready, onclick: () => {
                                 if ($("#advtimectrl").checked == true) {
                                     $("#advtimectrl").click();
                                 }
-                                go();
+                                white_engine_datastream = "";
+                                black_engine_datastream = "";
+                                setTimeout(() => {
+                                    if (!review_mode) {
+                                        setFen(true, false);
+                                    }
+                                    go();
+                                }, 10);
                             }
                         }, "Go"),
                         m(
@@ -1795,6 +3980,12 @@
                                 onclick: () => {
                                     board_setup_mode = !board_setup_mode;
                                 },
+                                onchange: () => {
+                                    if ($("#isboardsetup").checked == false) {
+                                        postMessageToEngine("WHITE", newGameCommand("WHITE"), using_white_engine);
+                                        postMessageToEngine("BLACK", newGameCommand("BLACK"), using_black_engine);
+                                    }
+                                },
                             }),
                             "Board Setup"
                         ),
@@ -1830,7 +4021,9 @@
                                 if (review_mode) {
                                     return;
                                 }
-                                window.setTimeout(setFen, 10);
+                                window.setTimeout(() => {
+                                    setFen(false, true);
+                                }, 10);
                             },
                             hidden: true,
                         }, "Set position (internal)"),
@@ -1871,6 +4064,7 @@
                                     m("option", { value: "tournament" }, "Tournament"),
                                     m("option", { value: "time per move" }, "Time Per Move"),
                                     m("option", { value: "hourglass" }, "Hourglass"),
+                                    m("option", { value: "byoyomi" }, "Byo-yomi"),
                                 ]
                             ),
                             m("input[type=number]#whitestarttime", {
@@ -1880,8 +4074,18 @@
                             }),
                             m("input[type=number]#whitetimegain", {
                                 placeholder: "Time gain (ms)",
-                                disabled: !is_ready || review_mode || $("#whitetimetype").innerHTML == "infinite" || $("#whitetimetype").innerHTML == "time per move" || $("#whitetimetype").innerHTML == "hourglass",
+                                disabled: !is_ready || review_mode || $("#whitetimetype").innerHTML != "tournament",
                                 min: 0,
+                            }),
+                            m("input[type=number]#whitebyoyomitime", {
+                                placeholder: "Byoyomi time per period (ms)",
+                                disabled: !is_ready || review_mode || $("#whitetimetype").innerHTML != "byoyomi",
+                                min: 1,
+                            }),
+                            m("input[type=number]#whitebyoyomiperiodcount", {
+                                placeholder: "Byoyomi period count",
+                                disabled: !is_ready || review_mode || $("#whitetimetype").innerHTML != "byoyomi",
+                                min: 1,
                             }),
                             m("input[type=number]#whitetimemargin", {
                                 placeholder: "Time margin (ms)",
@@ -1905,6 +4109,7 @@
                                     m("option", { value: "tournament" }, "Tournament"),
                                     m("option", { value: "time per move" }, "Time Per Move"),
                                     m("option", { value: "hourglass" }, "Hourglass"),
+                                    m("option", { value: "byoyomi" }, "Byo-yomi"),
                                 ]
                             ),
                             m("input[type=number]#blackstarttime", {
@@ -1914,8 +4119,18 @@
                             }),
                             m("input[type=number]#blacktimegain", {
                                 placeholder: "Time gain (ms)",
-                                disabled: !is_ready || review_mode || $("#blacktimetype").innerHTML == "infinite" || $("#blacktimetype").innerHTML == "time per move" || $("#blacktimetype").innerHTML == "hourglass",
+                                disabled: !is_ready || review_mode || $("#blacktimetype").innerHTML != "tournament",
                                 min: 0,
+                            }),
+                            m("input[type=number]#blackbyoyomitime", {
+                                placeholder: "Byoyomi time per period (ms)",
+                                disabled: !is_ready || review_mode || $("#blacktimetype").innerHTML != "byoyomi",
+                                min: 1,
+                            }),
+                            m("input[type=number]#blackbyoyomiperiodcount", {
+                                placeholder: "Byoyomi period count",
+                                disabled: !is_ready || review_mode || $("#blacktimetype").innerHTML != "byoyomi",
+                                min: 1,
                             }),
                             m("input[type=number]#blacktimemargin", {
                                 placeholder: "Time margin (ms)",
@@ -1927,12 +4142,12 @@
                             m("button#gamestart", { disabled: !is_ready || review_mode, onclick: goWithTimeControl }, "Start Game"),
                             m("p", {
                                 onclick: () => {
-                                    alert("This time control system allows user select different time modes for two sides and gives user more choice on time odds settings.\nThe time modes are:\nInfinite: Selected side has infinite time\nTournament: Selected side has limited time and may get a time increment after a move\nTime per move: Selected side need to make each move within a fixed time limit\nHourglass: Selected side has limited time and used time will be added to opponent's time.\nNote: if you set engine's time mode to infinite, it will think forever!");
+                                    alert("This time control system allows user select different time modes for two sides and gives user more choice on time odds settings.\nThe time modes are:\nInfinite: Selected side has infinite time.\nTournament: Selected side has limited time and may get a time increment after a move.\nTime per move: Selected side need to make each move within a fixed time limit.\nHourglass: Selected side has limited time and used time will be added to opponent's time.\nByo-yomi: Selected side will enter the countdown(byoyomi) period(s) after their initial time runs out. During countdown periods, if the player make a move before the countdown period time runs out, the time will be reset to full time of countdown periods(Specified in \"byoyomi time per period\"), otherwise the remaining period count will be decreased by 1 and the time will be reset to full time of countdown periods(Specified in \"byoyomi time per period\"). If there's no countdown periods left and the remaining time runs out, this side runs out of time.\nNote: if you set engine's time mode to infinite, it will think forever!");
                                 }
                             }, "[Why can I choose different time modes for two sides?]"),
                             m("p", {
                                 onclick: () => {
-                                    alert("Start time: The initial time at the beginning of the game. Not applicable to infinite.\nTime gain: Get a time increment of this many milliseconds after every move. Only applicable to tournament.\nTime margin: The time can be exceeded by this many milliseconds. The remaining time will be shown as minus numbers if exceeded. Not applicable to infinite.");
+                                    alert("Start time: The initial time at the beginning of the game. Not applicable to infinite.\nTime gain: Get a time increment of this many milliseconds after every move. Only applicable to tournament.\nByoyomi time per period: The time (in milliseconds) of each period when in extra countdown(byoyomi) periods. Only applicable to byo-yomi.\nByoyomi period count: The count of countdown(byoyomi) periods. Only applicable to byo-yomi.\nTime margin: The time can be exceeded by this many milliseconds. The remaining time will be shown as minus numbers if exceeded. Not applicable to infinite.");
                                 }
                             }, "  [What are these parameters?]"),
                         ]),
@@ -2025,7 +4240,7 @@
                             m(
                                 "button#boardsetupcopyfen",
                                 { disabled: !is_ready },
-                                "Copy FEN"
+                                "Copy FEN & Set"
                             ),
                         ]),
                         m("div#pocketpiecechange", { hidden: true }, [
@@ -2050,8 +4265,8 @@
                                 m("div", [
                                     m("p","Side to move:"),
                                     m("select#dropdown-sidetomove", [
-                                        m("option", { value: "white/red/sente" }, "white/red/sente"),
-                                        m("option", { value: "black/black/gote" }, "black/black/gote"),
+                                        m("option", { value: "First Mover" }, "First Mover"),
+                                        m("option", { value: "Second Mover" }, "Second Mover"),
                                     ]),
                                 ]),
                                 m("div", [
@@ -2176,7 +4391,7 @@
                             m("p#positioninfo", ""),
                             m("p#currentboardfen"),
                             m("p#label-pgn"),
-                            m("div#output2", { onupdate: scrollOutput }, m("pre", output2)),
+                            m("div#output2-div", m("pre#output2", "")),
                             m("div#timers", { hidden: !advanced_time_control }, [
                                 m("div#whitetimer", [
                                     m("p", "White Time"),

@@ -12,6 +12,7 @@ const checkboxAdjudicate = document.getElementById("check-adjudicate");
 const textFen = document.getElementById("fen");
 const textMoves = document.getElementById("move");
 const pSetFen = document.getElementById("set");
+const buttonSetFen = document.getElementById("setpos");
 const labelPgn = document.getElementById("label-pgn");
 const labelStm = document.getElementById("label-stm");
 const chessgroundContainerEl = document.getElementById("chessground-container-div");
@@ -533,7 +534,7 @@ new Module().then(loadedModule => {
         if (dropdownPositionVariantType.value == "(default)") {
             textFen.value = "";
             textMoves.value = "";
-            pSetFen.click();
+            buttonSetFen.click();
         }
         UpdateVariantsPositionNameDropdown();
         positionInformation.innerHTML = "";
@@ -551,7 +552,7 @@ new Module().then(loadedModule => {
                     textFen.value = game.FEN;
                     positionInformation.innerHTML = game.Description;
                     textMoves.value = "";
-                    pSetFen.click();
+                    buttonSetFen.click();
                 }
                 else {
                     dropdownPositionVariantName.selectedIndex = -1;
@@ -646,10 +647,10 @@ function getFEN() {
     let FEN = chessground.getFen();
     let width = chessground.state.dimensions.width;
     let height = chessground.state.dimensions.height;
-    if (dropdownSideToMove.value == "white/red/sente") {
+    if (dropdownSideToMove.value == "First Mover") {
         FEN += " w";
     }
-    else if (dropdownSideToMove.value == "black/black/gote") {
+    else if (dropdownSideToMove.value == "Second Mover") {
         FEN += " b";
     }
     let castling = " ";
@@ -740,7 +741,7 @@ function validateFEN(FEN) {
     if (FEN == null) {
         return false;
     }
-    let result = ffish.validateFen(FEN);
+    let result = ffish.validateFen(FEN, dropdownVariant.value);
     if (result >= 0) {
         window.alert("No errors found.");
         return true;
@@ -973,6 +974,9 @@ function resetTimer() {
 }
 
 function getDests(board) {
+    if (isBoardSetup.checked) {
+        return EmptyMap;
+    }
     const dests = new Map();
     const moves = board.legalMoves().split(" ").filter(m => m !== "");
 
@@ -991,6 +995,9 @@ function getDests(board) {
 
 function getColorOrUndefined(board) {
     if (getGameStatus(false) == "END") return undefined;
+    if (isBoardSetup.checked) {
+        return "both";
+    }
     return getColor(board);
 }
 
