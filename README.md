@@ -2,7 +2,7 @@
 
 This is an experimental version of FairyGround (See [https://github.com/ianfab/fairyground](https://github.com/ianfab/fairyground)) with new features added. It is a simple demo and playground for [Fairy-Stockfish](https://github.com/ianfab/Fairy-Stockfish) in the browser, using its [WebAssembly port](https://github.com/ianfab/fairy-stockfish.wasm), its [ffish.js](https://www.npmjs.com/package/ffish-es6) library, and the graphical [chessgroundx](https://github.com/gbtami/chessgroundx) library. It is based on the [demo for Fairy-Stockfish WASM](https://github.com/ianfab/fairy-stockfish-nnue-wasm-demo) and [ffish-test](https://github.com/thearst3rd/ffish-test).
 
-You can see it deployed at: [https://fairyground-new.vercel.app/](https://fairyground-new.vercel.app/)
+You can see it deployed at: [https://fairy-ground-experimental.vercel.app/](https://fairy-ground-experimental.vercel.app/)
 (This version does not support binary engine loading feature. To enable it, see step 5 below.)
 
 ## Usage (Unix-like system installation)
