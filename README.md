@@ -11,10 +11,6 @@ Same as [https://github.com/ianfab/fairyground](https://github.com/ianfab/fairyg
 
 ## Usage (Windows installation)
 
-If you have installation like Cygwin, MSYS2, Mingw64, etc., please enter following commands in their Bash console instead of CMD, as npm seems to have problems with conhost.exe.
-
-If you don't, open CMD and you will need to change the installation command.(See below step 4)
-
 Lines start with # or :: are comments, where # used for Bash and :: used for CMD. Do not enter them into your console.
 
 1. Install Node.js at
